@@ -41,7 +41,7 @@ router.post('/', (req, res) => {
         last_name: req.body.last_name,
         email: req.body.email,
         password: req.body.password,
-        knowledegable_in: req.body.knowledegable_in
+        knowledgeable_in: req.body.knowledgeable_in
     })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {

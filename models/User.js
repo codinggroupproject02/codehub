@@ -45,7 +45,7 @@ User.init(
             len: [4]
           }
         },
-        knowledegable_in: {
+        knowledgeable_in: {
             type: DataTypes.STRING,
             allowNull: false
         }

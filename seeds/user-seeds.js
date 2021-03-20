@@ -7,70 +7,70 @@ const userdata = [
     last_name: 'alesmonde0',
     email: 'nwestnedge0@cbc.ca',
     password: 'password123',
-    knowledgable_in: 'python'
+    knowledgeable_in: 'python'   
   },
   {
     first_name: 'alfred',
-    username: 'jwilloughway1',
+    last_name: 'jwilloughway1',
     email: 'rmebes1@sogou.com',
     password: 'password123',
-    knowledgable_in: 'python'
+    knowledgeable_in: 'python'
   },
   {
     first_name: 'alfred',
-    username: 'iboddam2',
+    last_name: 'iboddam2',
     email: 'cstoneman2@last.fm',
     password: 'password123',
-    knowledgable_in: 'python'
+    knowledgeable_in: 'python'
   },
   {
     first_name: 'alfred',
-    username: 'dstanmer3',
+    last_name: 'dstanmer3',
     email: 'ihellier3@goo.ne.jp',
     password: 'password123',
-    knowledgable_in: 'python'
+    knowledgeable_in: 'python'
   },
   {
     first_name: 'alfred',
-    username: 'djiri4',
+    last_name: 'djiri4',
     email: 'gmidgley4@weather.com',
     password: 'password123',
-    knowledgable_in: 'python'
+    knowledgeable_in: 'python'
   },
   {
     first_name: 'alfred',
-    username: 'msprague5',
+    last_name: 'msprague5',
     email: 'larnout5@imdb.com',
     password: 'password123',
-    knowledgable_in: 'python'
+    knowledgeable_in: 'python'
   },
   {
     first_name: 'alfred',
-    username: 'mpergens6',
+    last_name: 'mpergens6',
     email: 'hnapleton6@feedburner.com',
     password: 'password123',
-    knowledgable_in: 'python'
+    knowledgeable_in: 'python'
   },
   {
     first_name: 'alfred',
-    username: 'tpenniell7',
+    last_name: 'tpenniell7',
     email: 'kperigo7@china.com.cn',
     password: 'password123',
-    knowledgable_in: 'python'
+    knowledgeable_in: 'python'
   },
   {
     first_name: 'alfred',
-    username: 'msabbins8',
+    last_name: 'msabbins8',
     email: 'lmongain8@google.ru',
     password: 'password123',
-    knowledgable_in: 'python'
+    knowledgeable_in: 'python'
   },
   {
     first_name: 'alfred',
-    username: 'jmacarthur9',
+    last_name: 'jmacarthur9',
     email: 'bsteen9@epa.gov',
     password: 'password123',
-    knowledgable_in: 'python'
+    knowledgeable_in: 'python'
   }
 ];
 
