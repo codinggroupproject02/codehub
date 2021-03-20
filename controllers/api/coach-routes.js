@@ -92,4 +92,28 @@ router.delete('/:id', (req, res) => {
     });
 });
 
+//======== LOGIN ROUTE ========//
+router.post('/login', (req, res) => {
+    Coach.findOne({
+        where: {
+            email: req.body.email
+        }
+    })
+    .then(dbCoachData => {
+        if (!dbCoachData) {
+            res.status(400).json({ message: 'User with email address not found!'});
+            return;
+        }
+
+        const validPassword = dbCoachData.checkPassword(req.body.password);
+        
+        if(!validPassword) {
+            res.status(400).json({ message: 'Incorrect password' });
+            return;
+        }
+
+        res.json({ coach: dbCoachData, message: 'Login successful!' });
+    })
+});
+
 module.exports = router;
