@@ -41,6 +41,7 @@ router.post('/', (req, res) => {
         first_name: req.body.first_name,
         last_name: req.body.last_name,
         email: req.body.email,
+        skills: req.body.skills,
         password: req.body.password
     })
     .then(dbCoachData => res.json(dbCoachData))
@@ -52,7 +53,8 @@ router.post('/', (req, res) => {
 
 //===== UPDATE COACH =====//
 router.put('/:id', (req, res) => {
-    Coach.update({
+    Coach.update(req.body, {
+        individualHooks: true,
         where: {
             id: req.params.id
         }

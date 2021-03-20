@@ -18,11 +18,17 @@ Coach.init(
         },
         first_name: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
         },
         last_name: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
         },
         email: {
             type: DataTypes.STRING,
@@ -36,6 +42,13 @@ Coach.init(
             allowNull: false,
             validate: {
                 len: [8]
+            }
+        },
+        skills: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1]
             }
         }
     },
