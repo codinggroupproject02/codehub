@@ -1,0 +1,31 @@
+{{#each posts as |post|}}
+<article>
+  <hr>
+  <div class="title">
+    <h3>{{post.title}}</h3>
+  </div>
+  <span data-post-id={{post.id}}>THIS IS THE POST ID: <b>{{post.id}}</b> </span>
+  <div>
+    {{post.content}}
+
+    <span> -- {{post.comments.length}} comment(s)</span>
+  </div>
+  <br>
+  <button type='submit' id="commentBtn">Comment</button>
+  <hr>
+</article>
+
+<div class="comments">
+  {{#each post.comments as |comment|}}
+  <section class="comment" style="border: 1px solid black; padding:5px">
+    <div class="meta" style="text-decoration: underline">
+      {{comment.user.first_name}} on {{comment.created_at}}
+    </div>
+    <div class="text" style="font-size: larger;">
+      {{comment.comment_text}}
+    </div>
+  </section>
+  {{/each}}
+</div>
+<script src="/javascript/comment.js"></script>
+{{/each}}
