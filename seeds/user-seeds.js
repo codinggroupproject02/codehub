@@ -3,6 +3,7 @@ const { User, Post } = require('../models');
 
 const userdata = [
   {
+    role: 'user',
     first_name: 'test',
     last_name: 'testy',
     email: 'test@gmail.ca',
@@ -10,6 +11,7 @@ const userdata = [
     knowledgeable_in: 'python'   
   },
   {
+    role: 'user',
     first_name: 'alfred',
     last_name: 'alesmonde0',
     email: 'nwestnedge0@cbc.ca',
@@ -17,6 +19,7 @@ const userdata = [
     knowledgeable_in: 'python'   
   },
   {
+    role: 'user',
     first_name: 'alfred',
     last_name: 'jwilloughway1',
     email: 'rmebes1@sogou.com',
@@ -24,6 +27,7 @@ const userdata = [
     knowledgeable_in: 'python'
   },
   {
+    role: 'user',
     first_name: 'alfred',
     last_name: 'iboddam2',
     email: 'cstoneman2@last.fm',
@@ -31,6 +35,7 @@ const userdata = [
     knowledgeable_in: 'python'
   },
   {
+    role: 'user',
     first_name: 'alfred',
     last_name: 'dstanmer3',
     email: 'ihellier3@goo.ne.jp',
@@ -38,6 +43,7 @@ const userdata = [
     knowledgeable_in: 'python'
   },
   {
+    role: 'user',
     first_name: 'alfred',
     last_name: 'djiri4',
     email: 'gmidgley4@weather.com',
@@ -45,6 +51,7 @@ const userdata = [
     knowledgeable_in: 'python'
   },
   {
+    role: 'user',
     first_name: 'alfred',
     last_name: 'msprague5',
     email: 'larnout5@imdb.com',
@@ -52,6 +59,7 @@ const userdata = [
     knowledgeable_in: 'python'
   },
   {
+    role: 'user',
     first_name: 'alfred',
     last_name: 'mpergens6',
     email: 'hnapleton6@feedburner.com',
@@ -59,6 +67,7 @@ const userdata = [
     knowledgeable_in: 'python'
   },
   {
+    role: 'user',
     first_name: 'alfred',
     last_name: 'tpenniell7',
     email: 'kperigo7@china.com.cn',
@@ -66,6 +75,7 @@ const userdata = [
     knowledgeable_in: 'python'
   },
   {
+    role: 'user',
     first_name: 'alfred',
     last_name: 'msabbins8',
     email: 'lmongain8@google.ru',
@@ -73,6 +83,7 @@ const userdata = [
     knowledgeable_in: 'python'
   },
   {
+    role: 'user',
     first_name: 'alfred',
     last_name: 'jmacarthur9',
     email: 'bsteen9@epa.gov',

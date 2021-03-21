@@ -58,6 +58,7 @@ router.get('/:id', (req, res) => {
 // POST /api/users
 router.post('/', (req, res) => {
     User.create({
+        role: req.body.role,
         first_name: req.body.first_name,
         last_name: req.body.last_name,
         email: req.body.email,

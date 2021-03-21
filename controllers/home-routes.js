@@ -21,10 +21,6 @@ router.get("/signup", (req, res) => {
 module.exports = router;
 router.get("/post", (req, res) => {
 
-    //Just to get an alert
-  console.log("*******************Is this session logged in? " + req.session.loggedIn+'****************');
-
-
   Post.findAll({
     attributes: [
       "id",
