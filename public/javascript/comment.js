@@ -1,10 +1,24 @@
-async function commentButtonAction(event){
-    event.preventDefault();
+async function commentButtonAction(post_id) {
+  let comment_text = prompt("Please enter the comment below", "");
+  //alert(comment_text + ". And the post_id is " + post_id);
 
-    let result = document.querySelector('#data-post-id');
+  if (comment_text) {
 
-    alert(result);
-    //alert('I am here! + post_id is '); 
+    const response = await fetch("/api/comments", {
+      method: "POST",
+      body: JSON.stringify({
+        post_id,
+        comment_text,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (response.ok) {
+      document.location.reload();
+    } else {
+      alert(response.statusText);
+    }
+  }
 }
-
-document.querySelector('#commentBtn').addEventListener('click',commentButtonAction)

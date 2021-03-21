@@ -40,7 +40,7 @@ router.get("/post", (req, res) => {
       {
         model: Comment,
         attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
-        order: [["created_at", "DESC"]], //Newest comment are shown first
+        order: [["created_at", "ASC"]], //Newest comment are shown first
         include: {
           model: User,
           attributes: ["first_name", "last_name"],
