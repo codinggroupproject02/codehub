@@ -1,17 +1,18 @@
 {{#each posts as |post|}}
 <article>
-    <hr>
-    <div class="title">
-        <h3>{{post.title}}</h3>
-    </div>
-    <div>
-        {{post.content}}
-    
+  <hr>
+  <div class="title">
+    <h3>{{post.title}}</h3>
+  </div>
+  <span data-post-id={{post.id}}>THIS IS THE POST ID: <b>{{post.id}}</b> </span>
+  <div>
+    {{post.content}}
+
     <span> -- {{post.comments.length}} comment(s)</span>
-    </div>
-    <br>
-    <button type='button'>Comment</button>
-    <hr>
+  </div>
+  <br>
+  <button type='submit' id="commentBtn">Comment</button>
+  <hr>
 </article>
 
 <div class="comments">
@@ -26,4 +27,5 @@
   </section>
   {{/each}}
 </div>
- {{/each}}
+<script src="/javascript/comment.js"></script>
+{{/each}}
