@@ -15,17 +15,25 @@
   <hr>
 </article>
 
+{{!-- {{#if loggedIn}} --}}
 <div class="comments">
   {{#each post.comments as |comment|}}
   <section class="comment" style="border: 1px solid black; padding:5px">
     <div class="meta" style="text-decoration: underline">
       {{comment.user.first_name}} on {{comment.created_at}}
     </div>
+    <span>Checking if it says logged in... {{loggedIn}}</span>
     <div class="text" style="font-size: larger;">
       {{comment.comment_text}}
     </div>
   </section>
   {{/each}}
 </div>
-<script src="/javascript/comment.js"></script>
+{{!-- {{/if}} --}}
+
+{{!-- This is for the post --}}
 {{/each}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}

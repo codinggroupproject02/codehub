@@ -6,21 +6,25 @@ router.get("/", (req, res) => {
   res.render("homepage");
 });
 
+router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
 
-router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
-      res.redirect('/');
-      return;
-    }
-  
-    res.render('login');
-  });
-  
-router.get('/signup', (req, res) => {
-      res.render('signup');
+  res.render("login");
+});
+
+router.get("/signup", (req, res) => {
+  res.render("signup");
 });
 module.exports = router;
 router.get("/post", (req, res) => {
+
+    //Just to get an alert
+  console.log("*******************Is this session logged in? " + req.session.loggedIn+'****************');
+
+
   Post.findAll({
     attributes: [
       "id",
@@ -58,11 +62,15 @@ router.get("/post", (req, res) => {
         return;
       }
       // serialize the data
-      const posts = dbPostData.map(post => post.get({ plain: true }));
+      const posts = dbPostData.map((post) => post.get({ plain: true }));
 
-      // pass data
-      res.render("codingBuddies", { posts });
+      // pass data if logged in
+      res.render("codingBuddies", {
+        posts,
+        loggedIn: false//req.session.loggedIn,
+      });
     })
+
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
