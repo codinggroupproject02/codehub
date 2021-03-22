@@ -13,13 +13,6 @@ router.get("/login", (req, res) => {
     res.redirect("/");
     return;
   }
-});
-
-router.get("/login", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
 
   res.render("login");
 });
@@ -28,9 +21,6 @@ router.get("/register", (req, res) => {
   res.render("register");
 });
 
-router.get("/signup", (req, res) => {
-  res.render("signup");
-});
 
 router.get("/post", (req, res) => {
   Post.findAll({
