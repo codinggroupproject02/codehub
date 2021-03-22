@@ -4,7 +4,8 @@ const sequelize = require("../config/connection");
 
 router.get("/", (req, res) => {
   res.render("homepage", {
-    loggedIn: req.session.loggedIn,        
+    loggedIn: req.session.loggedIn, 
+    role: req.session.role        
   });
   console.log('********************The user\'s role is: '+ req.session.role);
   console.log('********************Has the user really logged in? '+ req.session.loggedIn);
