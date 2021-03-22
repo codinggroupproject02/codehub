@@ -6,7 +6,7 @@ const userdata = [
     role: 'user',
     first_name: 'test',
     last_name: 'testy',
-    email: 'test@gmail.ca',
+    email: 'test@gmail.com',
     password: 'test',
     knowledgeable_in: 'python'   
   },

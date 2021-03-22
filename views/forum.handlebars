@@ -15,7 +15,7 @@
   <hr>
 </article>
 
-{{!-- {{#if loggedIn}} --}}
+{{#if loggedIn}}
 <div class="comments">
   {{#each post.comments as |comment|}}
   <section class="comment" style="border: 1px solid black; padding:5px">
@@ -29,9 +29,9 @@
   </section>
   {{/each}}
 </div>
-{{!-- {{/if}} --}}
+{{/if}}
 
-{{!-- This is for the post --}}
+This is for the post
 {{/each}}
 
 {{#if loggedIn}}

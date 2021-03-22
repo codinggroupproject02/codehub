@@ -13,16 +13,14 @@ router.get("/login", (req, res) => {
     res.redirect("/");
     return;
   }
-});
-
-router.get("/login", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
 
   res.render("login");
 });
+
+//Logout
+// router.post('/logout',(req,res) => {
+  
+// });
 
 router.get("/register", (req, res) => {
   res.render("register");
@@ -73,9 +71,9 @@ router.get("/post", (req, res) => {
       const posts = dbPostData.map((post) => post.get({ plain: true }));
 
       // pass data if logged in
-      res.render("codingBuddies", {
-        posts,
-        loggedIn: false, //req.session.loggedIn,
+      res.render("forum", {
+        posts
+        //loggedIn: false, //req.session.loggedIn,
       });
     })
 
