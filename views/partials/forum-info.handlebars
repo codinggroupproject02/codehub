@@ -6,8 +6,9 @@
   <div>
     {{content}}
 
-    <span> -- {{comments.length}} comment(s)</span>
+    <span> -- {{comments.length}} {{format_plural "comment" comment.length}}</span>
   </div>
+  {{!-- <span> Created at {{created_at}} </span> <<--NOT WORKING --}}
   <br>
   <button type='submit' id="commentBtn" onclick="commentButtonAction({{id}})">Comment</button>
   <hr>

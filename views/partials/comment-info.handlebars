@@ -3,7 +3,7 @@
 <div class="comments">
   <section class="comment" style="border: 1px solid black; padding:5px">
     <div class="meta" style="text-decoration: underline">
-      {{user.first_name}} {{user.last_name}} on {{created_at}}
+      {{user.first_name}} {{user.last_name}} on {{format_date created_at}}
     </div>
     {{!-- <span>Checking if it says logged in... {{loggedIn}}</span> --}}
     <div class="text" style="font-size: larger;">
