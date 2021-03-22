@@ -5,6 +5,7 @@ router.get('/', (req, res) => {
     User.findAll({
         attributes: [
             'id',
+            'role',
             'first_name',
             'last_name',
             'knowledgeable_in'

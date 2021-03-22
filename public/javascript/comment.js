@@ -3,7 +3,6 @@ async function commentButtonAction(post_id) {
   //alert(comment_text + ". And the post_id is " + post_id);
 
   if (comment_text) {
-
     const response = await fetch("/api/comments", {
       method: "POST",
       body: JSON.stringify({
