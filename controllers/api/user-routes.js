@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User, Post, Vote, Comment } = require("../../models");
+const withAuth = require('../../utils/auth');
 
 // GET /api/users
 router.get("/", (req, res) => {
@@ -69,6 +70,8 @@ router.post("/", withAuth, (req, res) => {
       req.session.user_id = dbUserData.id;
       req.session.email = dbUserData.email;
       req.session.loggedIn = true;
+      //Extra to determine the role
+      req.session.role = dbUserData.role;
 
       res.json(dbUserData);
     });
