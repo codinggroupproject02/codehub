@@ -3,7 +3,16 @@ const { Post, User, Vote, Comment } = require("../models");
 const sequelize = require("../config/connection");
 
 router.get("/", (req, res) => {
-  res.render("homepage");
+  res.render("homepage", {
+    loggedIn: req.session.loggedIn,
+  });
+});
+
+router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
 });
 
 router.get("/login", (req, res) => {
@@ -15,12 +24,15 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/register", (req, res) => {
+  res.render("register");
+});
+
 router.get("/signup", (req, res) => {
   res.render("signup");
 });
 module.exports = router;
 router.get("/post", (req, res) => {
-
   Post.findAll({
     attributes: [
       "id",
@@ -63,7 +75,7 @@ router.get("/post", (req, res) => {
       // pass data if logged in
       res.render("codingBuddies", {
         posts,
-        loggedIn: false//req.session.loggedIn,
+        loggedIn: false, //req.session.loggedIn,
       });
     })
 
