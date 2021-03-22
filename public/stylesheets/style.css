@@ -1,3 +1,7 @@
+li {
+  list-style-type: none;
+}
+
 /* BELOW CSS IS FROM THE LESSON. NEED TO BE REPLACED */
 
 * {
