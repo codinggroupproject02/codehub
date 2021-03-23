@@ -27,6 +27,8 @@ router.get("/post", (req, res) => {
     attributes: [
       "id",
       "title",
+      "type",
+      "skills",
       "content",
       "user_id",
       [
