@@ -13,7 +13,10 @@ router.get('/', (req, res) => {
     })
     .then(dbUserData => {
         const users = dbUserData.map(user => user.get({ plain: true }));
-        res.render('profile-cards', { users });
+        res.render('profile-cards', { 
+            users,
+            loggedIn: req.session.loggedIn
+         });
     })
     .catch(err => {
         console.log(err);
