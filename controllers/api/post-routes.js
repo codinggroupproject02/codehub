@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { Post, User, Vote, Comment } = require("../../models");
 const sequelize = require("../../config/connection");
-const withAuth = require('../../utils/auth');
+const withAuth = require("../../utils/auth");
 
 //Get all posts
 router.get("/", (req, res) => {
@@ -9,6 +9,8 @@ router.get("/", (req, res) => {
     attributes: [
       "id",
       "title",
+      "type",
+      "skills",
       "content",
       "user_id",
       [
@@ -24,6 +26,7 @@ router.get("/", (req, res) => {
       {
         model: Comment,
         attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+        order: [["created_at", "DESC"]],
         include: {
           model: User,
           attributes: ["first_name", "last_name"],
@@ -50,6 +53,8 @@ router.get("/:id", (req, res) => {
     attributes: [
       "id",
       "title",
+      "type",
+      "skills",
       "content",
       "user_id",
       [
@@ -93,6 +98,8 @@ router.post("/", withAuth, (req, res) => {
   Post.create({
     title: req.body.title,
     content: req.body.content,
+    type: req.body.type,
+    skills: req.body.skills,
     user_id: req.body.user_id,
   })
     .then((dbPostData) => res.json(dbPostData))
@@ -119,9 +126,11 @@ router.put("/upvote", withAuth, (req, res) => {
 router.put("/:id", withAuth, (req, res) => {
   Post.update(
     {
-      //title and post content can be changed
+      //Things that can be changed in Post
       title: req.body.title,
       content: req.body.content,
+      type: req.body.type,
+      skills: req.body.skills,
     },
     {
       where: {

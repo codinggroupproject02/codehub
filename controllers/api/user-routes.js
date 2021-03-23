@@ -24,7 +24,7 @@ router.get("/:id", (req, res) => {
     include: [
       {
         model: Post,
-        attributes: ["id", "title", "content", "created_at"],
+        attributes: ["id", "title", "type", "skills","content", "created_at"],
       },
       //Include the Comment model here
       {
@@ -71,7 +71,8 @@ router.post("/", withAuth, (req, res) => {
       req.session.email = dbUserData.email;
       req.session.loggedIn = true;
       //Extra to determine the role
-    //   req.session.role = dbUserData.role;
+      req.session.role = dbUserData.role;
+      req.session.var = false;
 
       res.json(dbUserData);
     });
@@ -98,6 +99,9 @@ router.post("/login", (req, res) => {
       req.session.user_id = dbUserData.id;
       req.session.email = dbUserData.email;
       req.session.loggedIn = true;
+      //to seperate the roles
+      req.session.role = dbUserData.role;
+      req.session.var = false;
 
       res.json({ user: dbUserData, message: "You are now logged in!" });
     });

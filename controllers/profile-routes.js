@@ -15,7 +15,9 @@ router.get('/', (req, res) => {
         const users = dbUserData.map(user => user.get({ plain: true }));
         res.render('profile-cards', { 
             users,
-            loggedIn: req.session.loggedIn
+            loggedIn: req.session.loggedIn,
+            role: req.session.role,
+            var: req.session.var
          });
     })
     .catch(err => {
