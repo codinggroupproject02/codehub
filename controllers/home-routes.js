@@ -11,8 +11,6 @@ router.get("/", (req, res) => {
     req.session.var = false;
   }
 
-  console.log('*************Role is:' + req.session.role);
-
   res.render("homepage", {
     loggedIn: req.session.loggedIn, 
     var: req.session.var      
