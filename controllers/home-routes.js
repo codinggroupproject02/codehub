@@ -3,9 +3,10 @@ const { Post, User, Vote, Comment } = require("../models");
 const sequelize = require("../config/connection");
 
 router.get("/", (req, res) => {
-  res.render("homepage", {
+  res.render("homepage",
+  {
     loggedIn: req.session.loggedIn, 
-    role: req.session.role        
+    // role: req.session.role        
   });
 });
 

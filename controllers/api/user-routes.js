@@ -71,7 +71,7 @@ router.post("/", withAuth, (req, res) => {
       req.session.email = dbUserData.email;
       req.session.loggedIn = true;
       //Extra to determine the role
-      req.session.role = dbUserData.role;
+    //   req.session.role = dbUserData.role;
 
       res.json(dbUserData);
     });
