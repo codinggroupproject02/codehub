@@ -24,7 +24,7 @@
 
     
 
-<body>
+<body id="home">
 
             
     <!--Nav-->
@@ -32,33 +32,34 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">The Coders Bay</a>
+                    <a class="navbar-brand">The Coders Bay</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="#">Coaching Buddies</a></li>
                     <li><a href="/profiles">Coding Coaches</a></li>
-                    <li><a href="#">Forum</a></li>
+                    <li><a href="/post">Forum</a></li>
+                    <li><a href="/bounties">Bounties</a></li>
 
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    
+                <ul class="nav navbar-nav navbar-right">                 
                     {{#if loggedIn}}
                     <li><a href="/login" id="logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                     {{else}}
                     <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
                     <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
                     {{/if}}
                 </ul>
             </div>
         </nav>
     </header>
       <main>
-            {{{body}}}
+        {{{body}}}
     </main>
 
     <footer>
-        enter text here
+
     </footer>
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>

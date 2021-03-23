@@ -1,0 +1,17 @@
+{{#each posts as |post|}}
+<li>
+  {{> forum-info post}}
+</li>
+
+
+
+  {{> comment-info post.comments}}
+
+
+
+{{!-- Comment: This is for the post --}}
+{{/each}}
+
+{{!-- {{#if loggedIn}} --}}
+<script src="/javascript/comment-forum.js"></script>
+{{!-- {{/if}} --}}

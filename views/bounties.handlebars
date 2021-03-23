@@ -1,0 +1,27 @@
+<h1>Testing the output</h1>
+
+{{#each user}}
+<li>
+  <article>
+  <hr>
+  <div class="title">
+    <h3>{{post.title}}</h3>
+  </div>
+  <div>
+    {{post.content}}
+
+    <span> -- {{post.comments.length}} {{format_plural "comment" post.comment.length}}</span>
+  </div>
+  {{!-- <span> Created at {{created_at}} </span> <<--NOT WORKING --}}
+  <br>
+  <button type='submit' id="commentBtn" onclick="commentButtonAction({{post.id}})">Comment</button>
+  <hr>
+</article>
+</li>
+
+{{!-- Comment: This is for the post --}}
+{{/each}}
+
+{{!-- {{#if loggedIn}} --}}
+<script src="/javascript/bounties.js"></script>
+{{!-- {{/if}} --}}
