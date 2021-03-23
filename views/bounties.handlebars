@@ -1,27 +1,13 @@
-<h1>Testing the output</h1>
-
-{{#each user}}
+{{#each posts as |post|}}
 <li>
-  <article>
-  <hr>
-  <div class="title">
-    <h3> {{role}}</h3>
-  </div>
-  <div>
-   Name : {{first_name}}{{last_name}}
-
-    <span> -- {{posts.length}}</span>
-  </div>
-  {{!-- <span> Created at {{created_at}} </span> <<--NOT WORKING --}}
-  <br>
-  {{!-- <button type='submit' id="commentBtn" onclick="commentButtonAction({{post.id}})">Comment</button> --}}
-  <hr>
-</article>
+  {{> forum-info post}}
 </li>
+
+{{> comment-info post.comments}}
 
 {{!-- Comment: This is for the post --}}
 {{/each}}
 
 {{!-- {{#if loggedIn}} --}}
-<script src="/javascript/bounties.js"></script>
+<script src="/javascript/comment-forum.js"></script>
 {{!-- {{/if}} --}}

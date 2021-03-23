@@ -117,14 +117,14 @@ const postdata = [
   {
     title: 'In hac habitasse platea dictumst.',
     content: 'There will be some content here',
-    type: 'bounties',
+    type: 'forum',
     skills: 1,
     user_id: 6
   },
   {
     title: 'Etiam justo.',
     content: 'There will be some content here',
-    type: 'bounties',
+    type: 'forum',
     skills: 1,
     user_id: 4
   },
