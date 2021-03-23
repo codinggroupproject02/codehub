@@ -5,16 +5,16 @@
   <article>
   <hr>
   <div class="title">
-    <h3>{{post.title}}</h3>
+    <h3> {{role}}</h3>
   </div>
   <div>
-    {{post.content}}
+   Name : {{first_name}}{{last_name}}
 
-    <span> -- {{post.comments.length}} {{format_plural "comment" post.comment.length}}</span>
+    <span> -- {{posts.length}}</span>
   </div>
   {{!-- <span> Created at {{created_at}} </span> <<--NOT WORKING --}}
   <br>
-  <button type='submit' id="commentBtn" onclick="commentButtonAction({{post.id}})">Comment</button>
+  {{!-- <button type='submit' id="commentBtn" onclick="commentButtonAction({{post.id}})">Comment</button> --}}
   <hr>
 </article>
 </li>

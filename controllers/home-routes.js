@@ -7,8 +7,6 @@ router.get("/", (req, res) => {
     loggedIn: req.session.loggedIn, 
     role: req.session.role        
   });
-  console.log('********************The user\'s role is: '+ req.session.role);
-  console.log('********************Has the user really logged in? '+ req.session.loggedIn);
 });
 
 router.get("/login", (req, res) => {
@@ -44,7 +42,7 @@ router.get("/post", (req, res) => {
       {
         model: Comment,
         attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
-        order: [["created_at", "ASC"]], //Newest comment are shown first
+        order: [["created_at", "DESC"]], //Newest comment are shown first
         include: {
           model: User,
           attributes: ["first_name", "last_name"],
@@ -63,6 +61,8 @@ router.get("/post", (req, res) => {
       }
       // serialize the data
       const posts = dbPostData.map((post) => post.get({ plain: true }));
+
+      console.log('***********posts: '+ JSON.stringify(posts));
 
       // pass data if logged in
       res.render("forum", {
