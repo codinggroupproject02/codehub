@@ -3,9 +3,17 @@ const { Post, User, Vote, Comment } = require("../models");
 const sequelize = require("../config/connection");
 
 router.get("/", (req, res) => {
+
+  let result = false;  //It's user then
+  if(req.session.role == 'coach'){
+    result = true;
+  }
+
+  console.log('*************Role is:' + req.session.role);
+
   res.render("homepage", {
     loggedIn: req.session.loggedIn, 
-    role: req.session.role        
+    role: result       
   });
 });
 

@@ -3,7 +3,15 @@ const { User, Post } = require('../models');
 
 const userdata = [
   {
-    role: 'user',
+    role: 'coach',
+    first_name: 'rrr',
+    last_name: 'rrr',
+    email: 'rrr@gmail.com',
+    password: 'rrrr',
+    knowledgeable_in: 'R'   
+  },
+  {
+    role: 'coach',
     first_name: 'test',
     last_name: 'testy',
     email: 'test@gmail.com',
@@ -11,7 +19,7 @@ const userdata = [
     knowledgeable_in: 'python'   
   },
   {
-    role: 'user',
+    role: 'coach',
     first_name: 'alfred',
     last_name: 'alesmonde0',
     email: 'nwestnedge0@cbc.ca',
@@ -19,7 +27,7 @@ const userdata = [
     knowledgeable_in: 'python'   
   },
   {
-    role: 'user',
+    role: 'coach',
     first_name: 'alfred',
     last_name: 'jwilloughway1',
     email: 'rmebes1@sogou.com',
