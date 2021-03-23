@@ -117,28 +117,28 @@ const postdata = [
   {
     title: 'In hac habitasse platea dictumst.',
     content: 'There will be some content here',
-    type: 'forum',
+    type: 'bounties',
     skills: 1,
     user_id: 6
   },
   {
     title: 'Etiam justo.',
     content: 'There will be some content here',
-    type: 'forum',
+    type: 'bounties',
     skills: 1,
     user_id: 4
   },
   {
     title: 'Nulla ut erat id mauris vulputate elementum.',
     content: 'There will be some content here',
-    type: 'forum',
+    type: 'bounties',
     skills: 1,
     user_id: 6
   },
   {
     title: 'Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
     content: 'There will be some content here',
-    type: 'forum',
+    type: 'bounties',
     skills: 1,
     user_id: 7
   }

@@ -24,6 +24,7 @@ router.get("/register", (req, res) => {
 
 router.get("/post", (req, res) => {
   Post.findAll({
+    where: { type: "forum"},
     attributes: [
       "id",
       "title",
@@ -31,6 +32,7 @@ router.get("/post", (req, res) => {
       "skills",
       "content",
       "user_id",
+      "created_at",
       [
         sequelize.literal(
           "(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)"
@@ -58,7 +60,7 @@ router.get("/post", (req, res) => {
   })
     .then((dbPostData) => {
       if (!dbPostData) {
-        res.status(404).json({ message: "No post found with this id" });
+        res.status(404).json({ message: "No post found with this type of post" });
         return;
       }
       // serialize the data
