@@ -8,8 +8,9 @@ const { Post, User, Comment } = require("../models");
 
 router.get("/", (req, res) => {
     //To get the post from the user
-    User.findAll({
+    User.findOne({
         attributes: { exclude: ["password"] },
+        where: { id: req.session.user_id},
         include: [
             {
               model: Post,
@@ -31,13 +32,16 @@ router.get("/", (req, res) => {
         res.status(404).json({ message: "No post found with this id" });
         return;
       }
-      // serialize the data
-      const user = dbPostData.map((usr) => usr.get({plain:true}));
 
-      console.log('**********What is the output: '+ JSON.stringify(user[0])).
+      // console.log('**********What is the output: '+ JSON.stringify(dbPostData));
+
+      // serialize the data
+      const user = dbPostData.get({plain:true});    
+      
+      console.log('************user: '+ JSON.stringify(user));
       
       //pass data if logged in
-      res.render("bounties",{user});      
+      res.render("bounties",user);      
     })
     .catch((err) => {
       console.log(err);
