@@ -7,8 +7,6 @@ router.get("/", (req, res) => {
     loggedIn: req.session.loggedIn, 
     role: req.session.role        
   });
-  console.log('********************The user\'s role is: '+ req.session.role);
-  console.log('********************Has the user really logged in? '+ req.session.loggedIn);
 });
 
 router.get("/login", (req, res) => {
