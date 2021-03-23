@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User, Post, Vote, Comment } = require("../../models");
+const withAuth = require('../../utils/auth');
 
 // GET /api/users
 router.get("/", (req, res) => {
@@ -56,7 +57,7 @@ router.get("/:id", (req, res) => {
 });
 
 // POST /api/users
-router.post("/", (req, res) => {
+router.post("/", withAuth, (req, res) => {
   User.create({
     role: req.body.role,
     first_name: req.body.first_name,
@@ -69,13 +70,15 @@ router.post("/", (req, res) => {
       req.session.user_id = dbUserData.id;
       req.session.email = dbUserData.email;
       req.session.loggedIn = true;
+      //Extra to determine the role
+      req.session.role = dbUserData.role;
 
       res.json(dbUserData);
     });
   });
 });
 //POST /api/login
-router.post("/login", (req, res) => {
+router.post("/login", withAuth, (req, res) => {
   User.findOne({
     where: {
       email: req.body.email,
@@ -96,12 +99,13 @@ router.post("/login", (req, res) => {
       req.session.email = dbUserData.email;
       req.session.loggedIn = true;
 
+
       res.json({ user: dbUserData, message: "You are now logged in!" });
     });
   });
 });
 
-router.post("/logout", (req, res) => {
+router.post("/logout", withAuth, (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
@@ -112,7 +116,7 @@ router.post("/logout", (req, res) => {
 });
 
 // PUT /api/users/1
-router.put("/:id", (req, res) => {
+router.put("/:id", withAuth, (req, res) => {
   User.update(req.body, {
     individualHooks: true,
     where: {
@@ -133,7 +137,7 @@ router.put("/:id", (req, res) => {
 });
 
 // DELETE /api/users/1
-router.delete("/:id", (req, res) => {
+router.delete("/:id", withAuth, (req, res) => {
   User.destroy({
     where: {
       id: req.params.id,
