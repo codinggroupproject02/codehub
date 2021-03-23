@@ -4,16 +4,18 @@ const sequelize = require("../config/connection");
 
 router.get("/", (req, res) => {
 
-  let result = false;  //It's user then
+  let result;  //It's user then
   if(req.session.role == 'coach'){
-    result = true;
+    req.session.var = true;
+  }else{
+    req.session.var = false;
   }
 
   console.log('*************Role is:' + req.session.role);
 
   res.render("homepage", {
     loggedIn: req.session.loggedIn, 
-    role: result       
+    var: req.session.var      
   });
 });
 
@@ -79,7 +81,9 @@ router.get("/post", (req, res) => {
       // pass data if logged in
       res.render("forum", {
         posts,
-        loggedIn:req.session.loggedIn
+        loggedIn:req.session.loggedIn,
+        role: req.session.role,
+        var: req.session.var
       });
     })
 

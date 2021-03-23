@@ -72,6 +72,7 @@ router.post("/", withAuth, (req, res) => {
       req.session.loggedIn = true;
       //Extra to determine the role
       req.session.role = dbUserData.role;
+      req.session.var = false;
 
       res.json(dbUserData);
     });
@@ -98,8 +99,9 @@ router.post("/login", (req, res) => {
       req.session.user_id = dbUserData.id;
       req.session.email = dbUserData.email;
       req.session.loggedIn = true;
-      //adding the role
+      //to seperate the roles
       req.session.role = dbUserData.role;
+      req.session.var = false;
 
       res.json({ user: dbUserData, message: "You are now logged in!" });
     });

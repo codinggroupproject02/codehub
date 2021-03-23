@@ -51,7 +51,8 @@ router.get("/", (req, res) => {
         posts,
         loggedIn:req.session.loggedIn,
         //extra to isolate the coach view
-        loggedIn:req.session.role
+        loggedIn:req.session.role,
+        var:req.session.var
       });
     })
 

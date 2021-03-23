@@ -11,7 +11,7 @@ const userdata = [
     knowledgeable_in: 'R'   
   },
   {
-    role: 'coach',
+    role: 'user',
     first_name: 'test',
     last_name: 'testy',
     email: 'test@gmail.com',
