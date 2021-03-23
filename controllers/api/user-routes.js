@@ -24,7 +24,7 @@ router.get("/:id", (req, res) => {
     include: [
       {
         model: Post,
-        attributes: ["id", "title", "content", "created_at"],
+        attributes: ["id", "title", "type", "skills","content", "created_at"],
       },
       //Include the Comment model here
       {
@@ -78,7 +78,7 @@ router.post("/", withAuth, (req, res) => {
   });
 });
 //POST /api/login
-router.post("/login", withAuth, (req, res) => {
+router.post("/login", (req, res) => {
   User.findOne({
     where: {
       email: req.body.email,
@@ -99,13 +99,12 @@ router.post("/login", withAuth, (req, res) => {
       req.session.email = dbUserData.email;
       req.session.loggedIn = true;
 
-
       res.json({ user: dbUserData, message: "You are now logged in!" });
     });
   });
 });
 
-router.post("/logout", withAuth, (req, res) => {
+router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
