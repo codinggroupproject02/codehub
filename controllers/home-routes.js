@@ -63,8 +63,8 @@ router.get("/post", (req, res) => {
 
       // pass data if logged in
       res.render("forum", {
-        posts
-        //loggedIn: false, //req.session.loggedIn,
+        posts,
+        loggedIn:req.session.loggedIn
       });
     })
 
