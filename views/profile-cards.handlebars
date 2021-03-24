@@ -5,11 +5,8 @@
   {{#each users}}
     <div class="card">
       <div class="card-body">
-        {{#if id}}
-        <img src="img/{{id}}.png" alt='noImage'>
-        {{else}}
+        {{!-- if statement to GET no value images --}}
         <img src="img/no_image.png" alt='noImage'>
-        {{/if}}
         <h2 class="card-title">{{first_name}} {{last_name}}</h2>
         <span>{{role}}</span>
         <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, sunt?</p>
