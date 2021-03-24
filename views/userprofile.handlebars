@@ -1,16 +1,21 @@
 <section class="profile">
-  <div>
+  <div class="page-title">
     <h1>Profile</h1>
   </div>
   <h2>{{first_name}} {{last_name}}</h2>
   <div class="user-bio">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugit ad voluptatum nobis. Facere at unde
-      perspiciatis aut molestias placeat.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos soluta ipsum culpa consequuntur ipsam sint dolores
-      laudantium unde fugiat accusantium? Quidem animi corrupti dicta, odit id recusandae accusamus laudantium
-      architecto nulla eveniet mollitia saepe natus.</p>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, tenetur veniam, id quia nihil incidunt dicta ipsum
-      earum animi rem doloribus distinctio dolore.</p>
+    <img src="https://www.raincitycorp.com/wp-content/uploads/2019/11/blank-profile-picture-973460_640.png"
+      alt="profile picture">
+    <div class="user-about">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugit ad voluptatum nobis. Facere at unde
+        perspiciatis aut molestias placeat.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos soluta ipsum culpa consequuntur ipsam sint dolores
+        laudantium unde fugiat accusantium? Quidem animi corrupti dicta, odit id recusandae accusamus laudantium
+        architecto nulla eveniet mollitia saepe natus.</p>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, tenetur veniam, id quia nihil incidunt dicta
+        ipsum
+        earum animi rem doloribus distinctio dolore.</p>
+    </div>
   </div>
 </section>
 
@@ -42,9 +47,15 @@
 </section>
 
 {{#each posts as |post|}}
-<li>
-  {{> forum-info post}}
-</li>
+<section>
+  <h2>My Posts</h2>
+  <ul>
+    <li>
+      {{> forum-info post}}
+      <a href="/userprofile/edit/{{post.id}}" class="edit-link btn btn-warning">Edit post</a>
+    </li>
+  </ul>
+</section>
 
 {{> comment-info post.comments}}
 
