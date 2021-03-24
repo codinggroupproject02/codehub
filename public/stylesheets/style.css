@@ -79,6 +79,11 @@ li {
   bottom: 0px;
 }
 
+.headlinePost-title{
+  display:flex;
+  align-items: center;
+}
+
 .headlinePosts div:hover{
   background-color: lightblue;
 }
@@ -166,10 +171,21 @@ li {
     border: 1px solid;
     margin-bottom: 15%;
     padding: 15px;
+    transition: box-shadow 1s;
+  }
+
+  .card:hover {
+    box-shadow: 0 0 3px #515151;
   }
 
   .card-title {
     font-size: 1.5vw;
+  }
+
+  .profile-card-img {
+    height: 275px;
+    width: 200px;
+    margin: auto;
   }
 
   .profile-links {
