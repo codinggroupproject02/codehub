@@ -57,7 +57,7 @@ router.get("/:id", (req, res) => {
 });
 
 // POST /api/users
-router.post("/", withAuth, (req, res) => {
+router.post("/", (req, res) => {
   User.create({
     role: req.body.role,
     first_name: req.body.first_name,
@@ -73,11 +73,12 @@ router.post("/", withAuth, (req, res) => {
       //Extra to determine the role
       req.session.role = dbUserData.role;
       req.session.var = false;
-
+      console.log('Userdata: ',dbUserData);
       res.json(dbUserData);
     });
   });
 });
+
 //POST /api/login
 router.post("/login", (req, res) => {
   User.findOne({
