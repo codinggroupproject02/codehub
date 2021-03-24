@@ -1,13 +1,44 @@
 <section class="profile">
-    <div>
-        <h1>Profile</h1>
-    </div>
+  <div>
+    <h1>Profile</h1>
+  </div>
   <h2>{{first_name}} {{last_name}}</h2>
   <div class="user-bio">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugit ad voluptatum nobis. Facere at unde perspiciatis aut molestias placeat.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos soluta ipsum culpa consequuntur ipsam sint dolores laudantium unde fugiat accusantium? Quidem animi corrupti dicta, odit id recusandae accusamus laudantium architecto nulla eveniet mollitia saepe natus.</p>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, tenetur veniam, id quia nihil incidunt dicta ipsum earum animi rem doloribus distinctio dolore.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugit ad voluptatum nobis. Facere at unde
+      perspiciatis aut molestias placeat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos soluta ipsum culpa consequuntur ipsam sint dolores
+      laudantium unde fugiat accusantium? Quidem animi corrupti dicta, odit id recusandae accusamus laudantium
+      architecto nulla eveniet mollitia saepe natus.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, tenetur veniam, id quia nihil incidunt dicta ipsum
+      earum animi rem doloribus distinctio dolore.</p>
   </div>
+</section>
+
+<form class="post-form">
+  <div class="form-group">
+    <label for="post-title"></label>
+    <input class="form-control" type="text" id="post-title" name="post-title" placeholder="Post Title" />
+  </div>
+  <div class="form-group">
+    <label for="content"></label>
+    <input class="form-control" id="content" name="content" placeholder="Content" />
+  </div>
+  <div class="form-group">
+    <label for="post-type"></label>
+    <select name='type' id="type" class="form-control">
+      <option value="" disabled selected>Post to</option>
+      <option value='forum'>Forum</option>
+      <option value='bounty'>Bounty</option>
+      <option value='codingbuddies'>Coding Buddies</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="skills"></label>
+    <input class="form-control" id="skills" name="skills" placeholder="Skills" />
+  </div>
+
+  <button type="submit" class="btn btn-dark btn-lg">Create Post</button>
+</form>
 </section>
 
 {{#each posts as |post|}}
@@ -17,6 +48,10 @@
 
 {{> comment-info post.comments}}
 
-<br><hr>
+<br>
+<hr>
 {{!-- Comment: This is for the post --}}
 {{/each}}
+
+
+<script src="/javascript/add-post.js"></script>
