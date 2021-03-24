@@ -24,6 +24,7 @@ async function registerFormHandler(event) {
             }
         });
         if (response.ok) {
+            window.location.replace("/login");
             console.log('********success');
         } else {
             alert(response.statusText);
