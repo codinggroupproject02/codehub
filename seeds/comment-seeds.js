@@ -2,54 +2,54 @@ const { Comment } = require('../models');
 
 const commentdata = [
   {
-    comment_text: 'Nunc rhoncus dui vel sem.',
+    comment_text: 'You can remove bullets by setting the list-style-type to none on the CSS for the parent element.',
+    user_id: 10,
+    post_id: 1
+  },
+  {
+    comment_text: 'If you\'re using Bootstrap, it has an "unstyled" class.',
     user_id: 6,
     post_id: 1
   },
   {
-    comment_text: 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.',
-    user_id: 6,
-    post_id: 8
+    comment_text: 'ID and NAME tokens must begin with a letter ([A-Za-z]) and may be followed by any number of letters, digits ([0-9]), hyphens ("-"), underscores ("_"), colons (":"), and periods (".").',
+    user_id: 8,
+    post_id: 2
   },
   {
-    comment_text: 'Aliquam erat volutpat. In congue.',
+    comment_text: 'jQuery does handle any valid ID name. You just need to escape metacharacters (i.e., dots, semicolons, square brackets...).',
     user_id: 3,
-    post_id: 10
+    post_id: 2
   },
   {
-    comment_text: 'Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.',
-    user_id: 3,
-    post_id: 18
-  },
-  {
-    comment_text: 'In hac habitasse platea dictumst.',
+    comment_text: 'Try using: <meta http-equiv="refresh" content="0; url=http://example.com/" />  Note: Place it in the head section.',
     user_id: 7,
-    post_id: 5
+    post_id: 3
   },
   {
-    comment_text: 'Vivamus vestibulum sagittis sapien.',
+    comment_text: 'With localStorage, web applications can store data locally within the user\'s browser. Before HTML5, application data had to be stored in cookies, included in every server request.',
     user_id: 1,
-    post_id: 20
-  },
-  {
-    comment_text: 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.',
-    user_id: 6,
-    post_id: 7
-  },
-  {
-    comment_text: 'Sed vel enim sit amet nunc viverra dapibus.',
-    user_id: 7,
     post_id: 4
   },
   {
-    comment_text: 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.',
+    comment_text: 'Well, local storage speed greatly depends on the browser the client is using, as well as the operating system.',
     user_id: 6,
-    post_id: 12
+    post_id: 4
   },
   {
-    comment_text: 'Morbi a ipsum.',
+    comment_text: 'I have helped many with web profiles. I am proficient in CSS. Rate: $15/hr',
+    user_id: 7,
+    post_id: 6
+  },
+  {
+    comment_text: 'We specialize in making custom full stack websites for inventory management systems. Rate $50/hr',
     user_id: 6,
-    post_id: 20
+    post_id: 5
+  },
+  {
+    comment_text: 'I regulary use Heroku and have helped many with maintaining there Heroku site. Rate $30/hr',
+    user_id: 6,
+    post_id: 7
   },
   {
     comment_text: 'Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.',
@@ -59,7 +59,7 @@ const commentdata = [
   {
     comment_text: 'Donec ut mauris eget massa tempor convallis.',
     user_id: 5,
-    post_id: 4
+    post_id: 9
   },
   {
     comment_text:
@@ -81,7 +81,7 @@ const commentdata = [
   {
     comment_text: 'Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.',
     user_id: 8,
-    post_id: 2
+    post_id: 8
   },
   {
     comment_text:
@@ -109,7 +109,7 @@ const commentdata = [
   {
     comment_text: 'Curabitur convallis.',
     user_id: 6,
-    post_id: 4
+    post_id: 16
   },
   {
     comment_text: 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
@@ -166,7 +166,7 @@ const commentdata = [
   {
     comment_text: 'Aliquam quis turpis eget elit sodales scelerisque.',
     user_id: 10,
-    post_id: 1
+    post_id: 10
   },
   {
     comment_text: 'Donec quis orci eget orci vehicula condimentum.',
@@ -176,7 +176,7 @@ const commentdata = [
   {
     comment_text: 'Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.',
     user_id: 5,
-    post_id: 3
+    post_id: 14
   },
   {
     comment_text: 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst.',
@@ -212,7 +212,7 @@ const commentdata = [
     comment_text:
       'Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.',
     user_id: 5,
-    post_id: 4
+    post_id: 19
   },
   {
     comment_text:
@@ -244,7 +244,7 @@ const commentdata = [
   {
     comment_text: 'Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.',
     user_id: 10,
-    post_id: 1
+    post_id: 11
   },
   {
     comment_text:
@@ -255,7 +255,7 @@ const commentdata = [
   {
     comment_text: 'Proin risus. Praesent lectus.',
     user_id: 10,
-    post_id: 1
+    post_id: 12
   },
   {
     comment_text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus.',
