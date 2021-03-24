@@ -8,8 +8,18 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos soluta ipsum culpa consequuntur ipsam sint dolores laudantium unde fugiat accusantium? Quidem animi corrupti dicta, odit id recusandae accusamus laudantium architecto nulla eveniet mollitia saepe natus.</p>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, tenetur veniam, id quia nihil incidunt dicta ipsum earum animi rem doloribus distinctio dolore.</p>
   </div>
-  <div class="meta">
-      <p>posts go here</p>
-    
-  </div>
 </section>
+
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
