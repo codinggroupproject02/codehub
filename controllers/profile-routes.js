@@ -3,6 +3,7 @@ const { User } = require('../models')
 
 router.get('/', (req, res) => {    
     User.findAll({
+        where: { role: "coach"},
         attributes: [
             'id',
             'role',
