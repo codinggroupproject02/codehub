@@ -53,6 +53,11 @@ li {
   bottom: 0px;
 }
 
+.headlinePost-title{
+  display:flex;
+  align-items: center;
+}
+
 .headlinePosts div:hover{
   background-color: lightblue;
 }
