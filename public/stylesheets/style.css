@@ -1,3 +1,42 @@
+<<<<<<< HEAD
+=======
+li {
+  list-style-type: none;
+}
+
+.commentAlignment{
+  margin-left: 15%;
+  margin-right: 10%;
+}
+
+.cardWithComments{
+  /*border: 1px solid;*/
+  margin-bottom: 0;
+  padding: 15px;
+
+  text-align: center;
+}
+
+.headlinePosts{
+  position: absolute;
+  top: 100px;
+  bottom: 0px;
+}
+
+.headlinePosts div:hover{
+  background-color: lightblue;
+}
+
+.headlineBackTop {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  text-align: center;
+  /*border: 2px solid lightblue;*/
+  background-color:lightblue ;
+}
+
+>>>>>>> 096ef037de75a9992f6351b263ecf5cf30c6893b
 /* BELOW CSS IS FROM THE LESSON. NEED TO BE REPLACED */
 
 * {

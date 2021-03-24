@@ -39,10 +39,12 @@
                     <li><a href="#">Coding Buddies</a></li>
                     <li><a href="/profiles">Coding Coaches</a></li>
                     <li><a href="/post">Forum</a></li>
-                    <li><a href="#">Members</a></li>
+                    {{#if var}}
+                    <li><a href="/bounties">Bounties</a></li>
+                    {{/if}}
+
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                <ul class="nav navbar-nav navbar-right">                 
                     {{#if loggedIn}}
                     <li><a href="/login" id="logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                     {{else}}

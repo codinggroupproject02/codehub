@@ -24,7 +24,7 @@ async function registerFormHandler(event) {
             }
         });
         if (response.ok) {
-            console.log('success');
+            console.log('********success');
         } else {
             alert(response.statusText);
         }
