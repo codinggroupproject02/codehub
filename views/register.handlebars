@@ -1,34 +1,71 @@
+<section class="register">
+    <form class="register-form">
+        <h1>Register</h1>
+        <div class="form-group">
+            <label for="role-register"></label>
+            <select name='role' id="role-register" class="form-control">
+                <option value="" disabled selected>Choose a role</option>
+                <option value='user'>User</option>
+                <option value='coach'>Coach</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="first-name-register"></label>
+            <input class="form-control" type="text" id="first-name-register" placeholder="First Name" />
+        </div>
+        <div class="form-group">
+            <label for="last-name-register"></label>
+            <input class="form-control" type="text" id="last-name-register" placeholder="Last Name" />
+        </div>
+        <div class="form-group">
+            <label for="email-register"></label>
+            <input class="form-control" type="text" id="email-register" placeholder="Email" />
+        </div>
+        <div class="form-group">
+            <label for="password-register"></label>
+            <input class="form-control" type="password" id="password-register" placeholder="Password" />
+        </div>
+        <div class="form-group">
+            <label for="knowledge-register"></label>
+            <input class="form-control" type="text" id="knowledge-register" placeholder="Coding languages" />
+        </div>
+
+        <button type="submit" class="btn btn-dark btn-lg">Register</button>
+    </form>
+    
+</section>
 <form class="register-form">
-    <div>
-        <label for="role-register">Role:</label>
-        <select name='role' id="role-register">
+    <h1>Register</h1>
+    <div class="form-group">
+        <label for="role-register"></label>
+        <select name='role' id="role-register" class="form-control">
+            <option value="" disabled selected>Choose a role</option>
             <option value='user'>User</option>
             <option value='coach'>Coach</option>
         </select>
     </div>
-    <div>
-        <label for="first-name-register">First name:</label>
-        <input type="text" id="first-name-register" />
+    <div class="form-group">
+        <label for="first-name-register"></label>
+        <input class="form-control" type="text" id="first-name-register" placeholder="First Name" />
     </div>
-    <div>
-        <label for="last-name-register">Last name:</label>
-        <input type="text" id="last-name-register" />
+    <div class="form-group">
+        <label for="last-name-register"></label>
+        <input class="form-control" type="text" id="last-name-register" placeholder="Last Name" />
     </div>
-    <div>
-        <label for="email-register">Email:</label>
-        <input type="text" id="email-register" />
+    <div class="form-group">
+        <label for="email-register"></label>
+        <input class="form-control" type="text" id="email-register" placeholder="Email" />
     </div>
-    <div>
-        <label for="password-register">Password:</label>
-        <input type="password" id="password-register" />
+    <div class="form-group">
+        <label for="password-register"></label>
+        <input class="form-control" type="password" id="password-register" placeholder="Password" />
     </div>
-    <div>
-        <label for="knowledge-register">What coding languages do you know?:</label>
-        <input type="text" id="knowledge-register" />
+    <div class="form-group">
+        <label for="knowledge-register"></label>
+        <input class="form-control" type="text" id="knowledge-register" placeholder="Coding languages" />
     </div>
-    <div>
-        <button type="submit">Register</button>
-    </div>
+
+    <button type="submit" class="btn btn-dark btn-lg">Register</button>
 </form>
 
 <script src="/javascript/register.js"></script>
