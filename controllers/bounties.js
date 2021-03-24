@@ -1,38 +1,10 @@
 const router = require("express").Router();
-const { Post, User, Vote, Comment } = require("../models");
 const sequelize = require("../config/connection");
+const { Post, User, Comment } = require("../models");
 
 router.get("/", (req, res) => {
-
-  let result;  //It's user then
-  if(req.session.role == 'coach'){
-    req.session.var = true;
-  }else{
-    req.session.var = false;
-  }
-
-  res.render("homepage", {
-    loggedIn: req.session.loggedIn, 
-    var: req.session.var      
-  });
-});
-
-router.get("/login", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
-
-  res.render("login");
-});
-
-router.get("/register", (req, res) => {
-  res.render("register");
-});
-
-router.get("/post", (req, res) => {
   Post.findAll({
-    where: { type: "forum"},
+    where: { type: "bounties"},
     attributes: [
       "id",
       "title",
@@ -74,14 +46,13 @@ router.get("/post", (req, res) => {
       // serialize the data
       const posts = dbPostData.map((post) => post.get({ plain: true }));
 
-      console.log('***********posts: '+ JSON.stringify(posts));
-
       // pass data if logged in
-      res.render("forum", {
+      res.render("bounties", {
         posts,
         loggedIn:req.session.loggedIn,
-        role: req.session.role,
-        var: req.session.var
+        //extra to isolate the coach view
+        loggedIn:req.session.role,
+        var:req.session.var
       });
     })
 

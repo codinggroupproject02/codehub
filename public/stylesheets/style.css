@@ -2,6 +2,43 @@ li {
   list-style-type: none;
 }
 
+.commentAlignment{
+  margin-left: 15%;
+  margin-right: 10%;
+}
+
+.cardWithComments{
+  /*border: 1px solid;*/
+  margin-bottom: 0;
+  padding: 15px;
+
+  text-align: center;
+}
+
+.headlinePosts{
+  position: absolute;
+  top: 100px;
+  bottom: 0px;
+}
+
+.headlinePost-title{
+  display:flex;
+  align-items: center;
+}
+
+.headlinePosts div:hover{
+  background-color: lightblue;
+}
+
+.headlineBackTop {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  text-align: center;
+  /*border: 2px solid lightblue;*/
+  background-color:lightblue ;
+}
+
 /* BELOW CSS IS FROM THE LESSON. NEED TO BE REPLACED */
 
 * {
@@ -9,7 +46,12 @@ li {
     margin: 0;
     padding: 0;
   }
-  
+
+  .login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   /* USER PROFILE STYLE START */
   .page-title {
     display: flex;
