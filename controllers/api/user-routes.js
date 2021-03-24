@@ -63,7 +63,7 @@ router.post("/", (req, res) => {
     last_name: req.body.last_name,
     email: req.body.email,
     password: req.body.password,
-    knowledgeable_in: req.body.knowledgeable_in,
+    knowledgeable_in: req.body.knowledgeable_in
   }).then((dbUserData) => {
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
@@ -72,11 +72,12 @@ router.post("/", (req, res) => {
       //Extra to determine the role
       req.session.role = dbUserData.role;
       req.session.var = false;
-
+      console.log('Userdata: ',dbUserData);
       res.json(dbUserData);
     });
   });
 });
+
 //POST /api/login
 router.post("/login", (req, res) => {
   User.findOne({
