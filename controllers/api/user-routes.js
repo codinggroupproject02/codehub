@@ -57,14 +57,15 @@ router.get("/:id", (req, res) => {
 });
 
 // POST /api/users
-router.post("/", withAuth, (req, res) => {
+router.post("/", (req, res) => {
+  console.log('************* req.body:'+ JSON.stringify(req.body.knowledgeable_in));
   User.create({
     role: req.body.role,
     first_name: req.body.first_name,
     last_name: req.body.last_name,
     email: req.body.email,
     password: req.body.password,
-    knowledgeable_in: req.body.knowledgeable_in,
+    knowledgeable_in: req.body.knowledgeable_in
   }).then((dbUserData) => {
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
