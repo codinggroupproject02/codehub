@@ -92,15 +92,23 @@ li {
   background-color:lightblue ;
 }
 /* PERSONAL PROFILE STYLES */
+.profile {
+  background-color: #ccc;
+}
+
 .page-title {
   width: 50%;
   margin: auto;
 }
 
+.page-title h2 {
+  font-size: 3.5vw;
+}
+
 .post-form {
   width: 50%;
-  margin: auto;
-  padding: 0 2%;
+  margin: 0 auto 8% auto;
+  padding: 0 2% 2% 2%;
 }
 
 .user-bio {
@@ -108,6 +116,7 @@ li {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 0;
 }
 
 .user-about {
@@ -116,13 +125,20 @@ li {
   flex-wrap: wrap;
   margin-left: 2%;
   margin-right: 10%;
+  font-size: 1.1vw;
+  line-height: 1.5;
 }
 
 .user-bio img {
   height: 250px;
   width: 250px;
-  margin: 30px;
+  margin: 30px 30px 0 30px;
   border-radius: 50%;
+}
+
+.edit-post-btn {
+  width: 5%;
+  margin: 0 auto 5% auto;
 }
 /*  END */
 
