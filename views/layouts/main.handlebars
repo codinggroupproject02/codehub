@@ -10,9 +10,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/chat.css" />
     <title> The Coders Bay </title>
 </head>
-<body>   
+<body style="background-color: white;">   
     <!--Nav-->
     <header>
         <nav class="navbar navbar-inverse">
@@ -22,7 +23,7 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="/">Home</a></li>
-                    <li><a href="#">Coaching Buddies</a></li>
+                    <li><a href="#">Coding Buddies</a></li>
                     <li><a href="/profiles">Coding Coaches</a></li>
                     <li><a href="/post">Forum</a></li>
                     {{#if var}}
@@ -43,7 +44,7 @@
         </nav>
     </header>
       <main>
-        {{{body}}}
+            {{{body}}}
     </main>
 
     <footer>

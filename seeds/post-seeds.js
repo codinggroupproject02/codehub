@@ -24,7 +24,7 @@ const postdata = [
   },
   {
     title: 'Local Storage vs Cookies',
-    content: 'I want to reduce load times on my websites by moving all cookies into local storage since they seem to have the same functionality. Are there any pros/cons (especially performance-wise) in using local storage to replace cookie functionality except for the obvious compatibility issues?',
+    content: 'I want to reduce load times on my websites by moving all cookies into local storage since they seem to have the same functionality.',
     type: 'forum',
     skills: 1,
     user_id: 4

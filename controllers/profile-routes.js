@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { User } = require('../models')
 
-router.get('/', (req, res) => {    
+router.get('/', (req, res) => {
     User.findAll({
+        where: { role: "coach"},
         attributes: [
             'id',
             'role',

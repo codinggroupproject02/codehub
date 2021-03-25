@@ -26,9 +26,15 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+//Logout
+// router.post('/logout',(req,res) => {
+  
+// });
+
 router.get("/register", (req, res) => {
   res.render("register");
 });
+
 
 router.get("/post", (req, res) => {
   Post.findAll({

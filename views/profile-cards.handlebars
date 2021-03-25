@@ -1,13 +1,14 @@
 <div class="page-title">
-    <h1>User Profiles</h1>
+    <h1>Coach Profiles</h1>
 </div>
 <section class="user-profiles">
   {{#each users}}
     <div class="card">
       <div class="card-body">
         {{!-- if statement to GET no value images --}}
-        <img src="img/no_image.png" alt='noImage'>
+        <img src="img/no_image.png" alt='noImage' class="profile-card-img headlinePost-title">
         <h2 class="card-title">{{first_name}} {{last_name}}</h2>
+        
         <span>{{role}}</span>
         <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, sunt?</p>
       </div>

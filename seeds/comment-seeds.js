@@ -17,22 +17,22 @@ const commentdata = [
     post_id: 2
   },
   {
-    comment_text: 'jQuery does handle any valid ID name. You just need to escape metacharacters (i.e., dots, semicolons, square brackets...). It\'s like saying that JavaScript has a problem with quotes only because you can\'t write var name = "O"Hara',
+    comment_text: 'jQuery does handle any valid ID name. You just need to escape metacharacters (i.e., dots, semicolons, square brackets...).',
     user_id: 3,
     post_id: 2
   },
   {
-    comment_text: 'Try using: <meta http-equiv="refresh" content="0; url=http://example.com/" />  Note: Place it in the head section. Additionally for older browsers if you add a quick link in case it doesn\'t refresh correctly: <p><a href="http://example.com/">Redirect</a></p>',
+    comment_text: 'Try using: <meta http-equiv="refresh" content="0; url=http://example.com/" />  Note: Place it in the head section.',
     user_id: 7,
     post_id: 3
   },
   {
-    comment_text: 'With localStorage, web applications can store data locally within the user\'s browser. Before HTML5, application data had to be stored in cookies, included in every server request. Large amounts of data can be stored locally, without affecting website performance. Although localStorage is more modern, there are some pros and cons to both techniques.',
+    comment_text: 'With localStorage, web applications can store data locally within the user\'s browser. Before HTML5, application data had to be stored in cookies, included in every server request.',
     user_id: 1,
     post_id: 4
   },
   {
-    comment_text: 'Well, local storage speed greatly depends on the browser the client is using, as well as the operating system. Chrome or Safari on a mac could be much faster than Firefox on a PC, especially with newer APIs. As always though, testing is your friend (I could not find any benchmarks). I really don\'t see a huge difference in cookie vs local storage. Also, you should be more worried about compatibility issues: not all browsers have even begun to support the new HTML5 APIs, so cookies would be your best bet for speed and compatibility.',
+    comment_text: 'Well, local storage speed greatly depends on the browser the client is using, as well as the operating system.',
     user_id: 6,
     post_id: 4
   },
