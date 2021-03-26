@@ -3,92 +3,100 @@ const { User, Post } = require('../models');
 
 const userdata = [
   {
+    role: 'coach',
+    first_name: 'Rose	',
+    last_name: 'Bond',
+    email: 'rose@gmail.com',
+    password: 'rose',
+    knowledgeable_in: 'R'   
+  },
+  {
     role: 'user',
-    first_name: 'test',
-    last_name: 'testy',
-    email: 'test@gmail.ca',
-    password: 'test',
+    first_name: 'Harry',
+    last_name: 'Nash',
+    email: 'harry@gmail.com',
+    password: 'harry',
     knowledgeable_in: 'python'   
   },
   {
-    role: 'user',
-    first_name: 'alfred',
-    last_name: 'alesmonde0',
-    email: 'nwestnedge0@cbc.ca',
-    password: 'password123',
-    knowledgeable_in: 'python'   
+    role: 'coach',
+    first_name: 'Dominic',
+    last_name: 'Duncan',
+    email: 'dominic@cbc.ca',
+    password: 'dominic',
+    knowledgeable_in: 'CSS'   
+  },
+  {
+    role: 'coach',
+    first_name: 'Richard',
+    last_name: 'Mackenzie',
+    email: 'richard@sogou.com',
+    password: 'richard',
+    knowledgeable_in: 'excel'
   },
   {
     role: 'user',
-    first_name: 'alfred',
-    last_name: 'jwilloughway1',
-    email: 'rmebes1@sogou.com',
-    password: 'password123',
+    first_name: 'Elizabeth',
+    last_name: 'Davies',
+    email: 'elizabeth@last.fm',
+    password: 'elizabeth',
+    knowledgeable_in: 'JavaScript'
+  },
+  {
+    role: 'user',
+    first_name: 'Bella',
+    last_name: 'Gibson',
+    email: 'bella@goo.ne.jp',
+    password: 'bella',
     knowledgeable_in: 'python'
   },
   {
     role: 'user',
-    first_name: 'alfred',
-    last_name: 'iboddam2',
-    email: 'cstoneman2@last.fm',
-    password: 'password123',
-    knowledgeable_in: 'python'
+    first_name: 'James',
+    last_name: 'Bower',
+    email: 'james@weather.com',
+    password: 'james',
+    knowledgeable_in: 'sequelize'
   },
   {
     role: 'user',
-    first_name: 'alfred',
-    last_name: 'dstanmer3',
-    email: 'ihellier3@goo.ne.jp',
-    password: 'password123',
-    knowledgeable_in: 'python'
+    first_name: 'Alison',
+    last_name: 'Grant',
+    email: 'alison@imdb.com',
+    password: 'alison',
+    knowledgeable_in: 'bootstrap'
   },
   {
     role: 'user',
-    first_name: 'alfred',
-    last_name: 'djiri4',
-    email: 'gmidgley4@weather.com',
-    password: 'password123',
-    knowledgeable_in: 'python'
+    first_name: 'Austin',
+    last_name: 'Vaughan',
+    email: 'austin@feedburner.com',
+    password: 'austin',
+    knowledgeable_in: 'express'
   },
   {
     role: 'user',
-    first_name: 'alfred',
-    last_name: 'msprague5',
-    email: 'larnout5@imdb.com',
-    password: 'password123',
-    knowledgeable_in: 'python'
+    first_name: 'Benjamin',
+    last_name: 'Sutherland',
+    email: 'benjamin@china.com.cn',
+    password: 'benjamin',
+    knowledgeable_in: 'MySql'
   },
   {
     role: 'user',
-    first_name: 'alfred',
-    last_name: 'mpergens6',
-    email: 'hnapleton6@feedburner.com',
-    password: 'password123',
-    knowledgeable_in: 'python'
+    first_name: 'Alexander',
+    last_name: 'Wilkins',
+    email: 'alexander@google.ru',
+    password: 'alexander',
+    knowledgeable_in: 'CSS'
   },
   {
     role: 'user',
-    first_name: 'alfred',
-    last_name: 'tpenniell7',
-    email: 'kperigo7@china.com.cn',
-    password: 'password123',
-    knowledgeable_in: 'python'
-  },
-  {
-    role: 'user',
-    first_name: 'alfred',
-    last_name: 'msabbins8',
-    email: 'lmongain8@google.ru',
-    password: 'password123',
-    knowledgeable_in: 'python'
-  },
-  {
-    role: 'user',
-    first_name: 'alfred',
-    last_name: 'jmacarthur9',
-    email: 'bsteen9@epa.gov',
-    password: 'password123',
-    knowledgeable_in: 'python'
+    first_name: 'Theresa',
+    last_name: 'Morgan',
+    email: 'theresa@epa.gov',
+    password: 'theresa',
+    knowledgeable_in: 'semantic-UI'
   }
 ];
 

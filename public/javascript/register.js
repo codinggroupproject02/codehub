@@ -9,24 +9,27 @@ async function registerFormHandler(event) {
     const knowledgeable_in = document.querySelector('#knowledge-register').value.trim();
 
     if (role && first_name && last_name && email && password && knowledgeable_in) {
-      const response = await fetch('/api/users', {
-        method: 'post',
-        body: JSON.stringify({
-          role,
-          first_name,
-          last_name,
-          email,
-          password,
-          knowledgeable_in
-        }),
-        headers: { 'Content-Type': 'application/json' }
-      });
-      if (response.ok) {
-          console.log('success');
-      } else {
-          alert(response.statusText);
-      }
+        const response = await fetch('/api/users', {
+            method: 'post',
+            body: JSON.stringify({
+                role,
+                first_name,
+                last_name,
+                email,
+                password,
+                knowledgeable_in
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        if (response.ok) {
+            window.location.replace("/login");
+            console.log('********success');
+        } else {
+            alert(response.statusText);
+        }
     }
-  }
-  
-  document.querySelector('.register-form').addEventListener('submit', registerFormHandler);
+}
+
+document.querySelector('.register-form').addEventListener('submit', registerFormHandler);

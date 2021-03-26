@@ -1,6 +1,6 @@
 <table id='top'>
 <tr>
-  <td style="width: 90%;">
+  <td style="width: 85%;">
 {{#each posts as |post|}}
 <li>
   {{> forum-info post}}
@@ -20,7 +20,7 @@
   <section class="headlinePosts">
   {{#each posts as |post|}}
   <a href="#{{post.id}}">
-  <div style="height: 100px; border:1px black solid; ">
+  <div class="headlinePost-title" style="height: 100px; border:1px black solid; ">
   <h4>{{post.title}}</h4>
   </div>
   </a>

@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { User } = require('../models')
 
-router.get('/', (req, res) => {
+router.get('/', (req, res) => {    
     User.findAll({
+        where: { role: "coach"},
         attributes: [
             'id',
             'role',
@@ -13,12 +14,19 @@ router.get('/', (req, res) => {
     })
     .then(dbUserData => {
         const users = dbUserData.map(user => user.get({ plain: true }));
-        res.render('profile-cards', { users });
+        res.render('profile-cards', { 
+            users,
+            loggedIn: req.session.loggedIn,
+            role: req.session.role,
+            var: req.session.var
+         });
     })
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
     });
 });
+
+
 
 module.exports = router;
