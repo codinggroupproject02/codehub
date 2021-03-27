@@ -63,9 +63,9 @@ const userdata = [
     knowledgeable_in: 'python'
   },
   {
-    image: '',
+    image: 'img/12.png',
     data: '',
-    role: 'user',
+    role: 'coach',
     first_name: 'James',
     last_name: 'Bower',
     email: 'james@weather.com',
@@ -75,7 +75,7 @@ const userdata = [
   {
     image: '',
     data: '',
-    role: 'user',
+    role: 'coach',
     first_name: 'Alison',
     last_name: 'Grant',
     email: 'alison@imdb.com',
