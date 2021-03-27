@@ -37,6 +37,8 @@ header {
   width: 100%;
   color: rgb(190, 189, 189);
   margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .about {
@@ -92,7 +94,7 @@ header {
 .arrow {
   display: flex;
   justify-content: center;
-  margin-top: 18%;
+  margin-top: 30vh;
 }
 
 .glyphicon-chevron-down {
@@ -280,6 +282,11 @@ li {
 }
 /*  END */
 
+
+/******** FORUM POSTS START ********/
+.forum-posts {
+  padding-top: 10%;
+}
 
 
   /* USER PROFILES STYLE START */
