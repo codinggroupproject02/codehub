@@ -64,9 +64,6 @@ router.get("/", /*withAuth,*/ (req, res) => {
       // serialize the data
       const posts = dbPostData.map((post) => post.get({ plain: true }));
 
-      //Get the User info from the post
-      // console.log('*********** Posts: ' +  JSON.stringify(dbPostData));
-
       // pass data if logged in
       res.render("userprofile", {
         posts,
@@ -74,8 +71,13 @@ router.get("/", /*withAuth,*/ (req, res) => {
         //extra to isolate the coach view
         role:req.session.role,
         var:req.session.var,
-        //profile
-        image:req.session.image
+        //My profile
+        user_id: req.session.user_id,
+        first_name: req.session.first_name,
+        //last_name: req.session.last_name,
+        email: req.session.email,
+        image:req.session.image,
+        knowledgeable_in:req.session.knowledgeable_in
       });
     })
 

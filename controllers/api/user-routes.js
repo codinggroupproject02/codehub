@@ -73,8 +73,11 @@ router.post("/", (req, res) => {
       //Extra to determine the role
       req.session.role = dbUserData.role;
       req.session.var = false;
-      //for the profile
-      req.session.role = dbUserData.image;
+      //for the My profile
+      req.session.image = dbUserData.image;
+      req.session.first_name = dbUserData.first_name;
+      req.session.last_name = dbUserData.last_name;
+      req.session.knowledgeable_in = dbUserData.knowledgeable_in;
 
       console.log("Userdata: ", dbUserData);
       res.json(dbUserData);
@@ -106,8 +109,11 @@ router.post("/login", (req, res) => {
       //to seperate the roles
       req.session.role = dbUserData.role;
       req.session.var = false;
-      //for the profile
-      req.session.role = dbUserData.image;
+      //for the My profile
+      req.session.image = dbUserData.image;
+      req.session.first_name = dbUserData.first_name;
+      req.session.last_name = dbUserData.last_name;
+      req.session.knowledgeable_in = dbUserData.knowledgeable_in;
 
       res.json({ user: dbUserData, message: "You are now logged in!" });
     });

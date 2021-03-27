@@ -232,6 +232,7 @@ li {
 /* PERSONAL PROFILE STYLES */
 .profile {
   background-color: #ccc;
+  margin: auto;
 }
 
 .page-title {
