@@ -12,7 +12,8 @@ router.get("/", (req, res) => {
 
   res.render("homepage", {
     loggedIn: req.session.loggedIn, 
-    var: req.session.var      
+    var: req.session.var,
+    first_name: req.session.first_name      
   });
 });
 
