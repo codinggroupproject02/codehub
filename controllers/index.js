@@ -6,6 +6,7 @@ const bounties = require('./bounties');
 const userProfileRoutes = require('./userprofile-routes');
 const chatRoutes = require('./chat-routes');
 
+router.use('/bounties',bounties);
 router.use('/api', apiRoutes);
 router.use('/', homeRoutes);
 router.use('/profiles', profileRoutes);
