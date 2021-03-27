@@ -23,7 +23,7 @@ router.get("/:id", (req, res) => {
     include: [
       {
         model: Post,
-        attributes: ["id", "title", "type", "skills","content", "created_at"],
+        attributes: ["id", "title", "type", "skills", "content", "created_at"],
       },
       //Include the Comment model here
       {
@@ -63,7 +63,8 @@ router.post("/", (req, res) => {
     last_name: req.body.last_name,
     email: req.body.email,
     password: req.body.password,
-    knowledgeable_in: req.body.knowledgeable_in
+    knowledgeable_in: req.body.knowledgeable_in,
+    //image and data is not entered
   }).then((dbUserData) => {
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
@@ -72,7 +73,10 @@ router.post("/", (req, res) => {
       //Extra to determine the role
       req.session.role = dbUserData.role;
       req.session.var = false;
-      console.log('Userdata: ',dbUserData);
+      //for the profile
+      req.session.role = dbUserData.image;
+
+      console.log("Userdata: ", dbUserData);
       res.json(dbUserData);
     });
   });
@@ -102,6 +106,8 @@ router.post("/login", (req, res) => {
       //to seperate the roles
       req.session.role = dbUserData.role;
       req.session.var = false;
+      //for the profile
+      req.session.role = dbUserData.image;
 
       res.json({ user: dbUserData, message: "You are now logged in!" });
     });

@@ -319,6 +319,7 @@ li {
     height: 275px;
     width: 200px;
     margin: auto;
+    object-fit: scale-down;
   }
 
   .profile-links {

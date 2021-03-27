@@ -3,7 +3,7 @@ const { User, Post } = require('../models');
 
 const userdata = [
   {
-    image: '',
+    image: 'img/11.jpg',
     data: '',
     role: 'coach',
     first_name: 'Rose	',
@@ -23,7 +23,7 @@ const userdata = [
     knowledgeable_in: 'python'   
   },
   {
-    image: '',
+    image: 'img/10.jpg',
     data: '',
     role: 'coach',
     first_name: 'Dominic',
@@ -33,7 +33,7 @@ const userdata = [
     knowledgeable_in: 'CSS'   
   },
   {
-    image: '',
+    image: 'img/13.jpg',
     data: '',
     role: 'coach',
     first_name: 'Richard',

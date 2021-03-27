@@ -19,7 +19,8 @@ router.get('/', (req, res) => {
             users,
             loggedIn: req.session.loggedIn,
             role: req.session.role,
-            var: req.session.var
+            var: req.session.var,
+            image: req.session.image
          });
     })
     .catch(err => {
