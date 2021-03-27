@@ -1,12 +1,145 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  min-height: 100vh;
+/********* MAIN PAGE STYLING ********/
+header {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
 }
+
+.navbar-brand {
+  font-size: 1.5vw;
+}
+
+.container-fluid {
+  padding: 8px 20px;
+  font-size: 1.2vw;
+}
+
+.navbar {
+  border-radius: 0;
+  margin: 0;
+  border: 0;
+}
+
+
+.jumbotron {
+  background-image: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url(../img/landing.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  color: rgb(190, 189, 189);
+  margin-bottom: 0;
+}
+
+.about {
+  margin-left: 3%;
+  margin-top: 10%;
+}
+
+.about h1 {
+  width: auto;
+  overflow: hidden; 
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  display: inline-block;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { max-width: 0 }
+  to { max-width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+.about p {
+  font-weight: 400;
+  margin-top: 3%;
+  line-height: 1.7;
+}
+
+.description{
+  animation:2.5s ease 0s normal forwards 1 fadein;
+  -webkit-animation:2.5s ease 0s normal forwards 1 fadein;
+  opacity:1
+  }
+  
+  @keyframes fadein{
+      0%{opacity:0}
+      80%{opacity:0}
+      100%{opacity:1}
+  }
+  @-webkit-keyframes fadein{
+    0%{opacity:0}
+    80%{opacity:0}
+    100%{opacity:1}
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  margin-top: 18%;
+}
+
+.glyphicon-chevron-down {
+  font-size: 3vw;
+  color: #718484;
+  -webkit-animation: bounce 6s infinite;
+  animation: bounce 6s infinite;
+}
+
+@keyframes bounce {
+  0%   {top: 0px;}
+  25%  {top: 50px;}
+  50%  {top: 0px;}
+  75%  {top: 50px;}
+  100% {top: 0px;}
+}
+
+@-webkit-keyframes bounce {
+  0%   {top: 0px;}
+  25%  {top: 50px;}
+  50%  {top: 0px;}
+  75%  {top: 50px;}
+  100% {top: 0px;}
+}
+
+.container {
+margin-bottom: 20%;
+background-color: #718484;
+width: 100%;
+min-height: 100vh;
+}
+
+.row {
+  margin: 15rem auto 0 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: white;
+  font-size: 1.1vw;
+}
+
+.about-img {
+  width: 375px;
+  height: 275px;
+}
+
+/********* MAIN PAGE STYLING END ********/
 
 .edit-input {
   background-color: #e4e4e4;

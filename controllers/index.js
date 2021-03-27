@@ -10,7 +10,6 @@ router.use('/api', apiRoutes);
 router.use('/', homeRoutes);
 router.use('/profiles', profileRoutes);
 router.use('/userprofile', userProfileRoutes);
-router.use('/bounties', bounties);
 router.use('/chatroom', chatRoutes);
 
 router.use((req,res) => {

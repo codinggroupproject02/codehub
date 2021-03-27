@@ -12,10 +12,17 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const formatMessage = require('./utils/messages')
 const { userJoin, getCurrentUser, userLeave, getRoomUsers } = require('./utils/user')
+<<<<<<< HEAD
 const { disconnect } = require('process')
 
 //const hbs = exphbs.create({ helpers });    <-- Later
 const hbs = exphbs.create({});
+=======
+
+
+const hbs = exphbs.create({ helpers });
+
+>>>>>>> 0dfc8df4cadd4e35613db00b806c5621b9e8da9f
 
 const app = express();
 const server = http.Server(app);
