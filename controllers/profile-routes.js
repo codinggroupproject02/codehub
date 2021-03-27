@@ -9,7 +9,8 @@ router.get('/', (req, res) => {
             'role',
             'first_name',
             'last_name',
-            'knowledgeable_in'
+            'knowledgeable_in',
+            'image'
         ]
     })
     .then(dbUserData => {

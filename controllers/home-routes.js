@@ -4,7 +4,6 @@ const sequelize = require("../config/connection");
 
 router.get("/", (req, res) => {
 
-  let result;  //It's user then
   if(req.session.role == 'coach'){
     req.session.var = true;
   }else{
@@ -26,15 +25,9 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-//Logout
-// router.post('/logout',(req,res) => {
-  
-// });
-
 router.get("/register", (req, res) => {
   res.render("register");
 });
-
 
 router.get("/post", (req, res) => {
   Post.findAll({
@@ -79,8 +72,6 @@ router.get("/post", (req, res) => {
       }
       // serialize the data
       const posts = dbPostData.map((post) => post.get({ plain: true }));
-
-      console.log('***********posts: '+ JSON.stringify(posts));
 
       // pass data if logged in
       res.render("forum", {
