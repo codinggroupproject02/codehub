@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/********* MAIN PAGE STYLING ********/
 header {
   position: fixed;
   z-index: 9999;
@@ -35,6 +36,7 @@ header {
   min-height: 100vh;
   width: 100%;
   color: rgb(190, 189, 189);
+  margin-bottom: 0;
 }
 
 .about {
@@ -115,6 +117,29 @@ header {
   75%  {top: 50px;}
   100% {top: 0px;}
 }
+
+.container {
+margin-bottom: 20%;
+background-color: #718484;
+width: 100%;
+min-height: 100vh;
+}
+
+.row {
+  margin: 15rem auto 0 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: white;
+  font-size: 1.1vw;
+}
+
+.about-img {
+  width: 375px;
+  height: 275px;
+}
+
+/********* MAIN PAGE STYLING END ********/
 
 .edit-input {
   background-color: #e4e4e4;
