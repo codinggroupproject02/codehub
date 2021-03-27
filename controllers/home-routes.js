@@ -78,7 +78,8 @@ router.get("/post", (req, res) => {
         posts,
         loggedIn:req.session.loggedIn,
         role: req.session.role,
-        var: req.session.var
+        var: req.session.var,
+        image: req.session.image
       });
     })
 

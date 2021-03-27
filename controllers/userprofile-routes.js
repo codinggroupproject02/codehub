@@ -3,11 +3,11 @@ const sequelize = require("../config/connection");
 const withAuth = require('../utils/auth')
 const { Post, User, Comment } = require("../models");
 
-
-router.get("/", withAuth, (req, res) => {
+router.get("/", /*withAuth,*/ (req, res) => {
   Post.findAll({
     where: {
-      user_id: req.session.user_id
+      // user_id: req.session.user_id
+      user_id:11   //<- to test the user_id
     },
     attributes: [
       "id",
@@ -19,10 +19,16 @@ router.get("/", withAuth, (req, res) => {
       "created_at",
       [
         sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)"
+          "(SELECT user.email FROM user WHERE post.id = user.id)"
         ),
-        "vote_count",
+        "user_email",
       ],
+      // [
+      //   sequelize.literal(
+      //     "(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)"
+      //   ),
+      //   "vote_count",
+      // ],
     ],
     order: [["created_at", "DESC"]],
     include: [
@@ -38,7 +44,15 @@ router.get("/", withAuth, (req, res) => {
       },
       {
         model: User,
-        attributes: ["first_name", "last_name"],
+        attributes: [
+          'id',
+          'first_name', 
+          'last_name',
+          'role',
+          'email',
+          'knowledgeable_in',
+          'image'
+        ],
       },
     ],
   })
@@ -50,13 +64,18 @@ router.get("/", withAuth, (req, res) => {
       // serialize the data
       const posts = dbPostData.map((post) => post.get({ plain: true }));
 
+      //Get the User info from the post
+      // console.log('*********** Posts: ' +  JSON.stringify(dbPostData));
+
       // pass data if logged in
       res.render("userprofile", {
         posts,
         loggedIn:req.session.loggedIn,
         //extra to isolate the coach view
-        loggedIn:req.session.role,
-        var:req.session.var
+        role:req.session.role,
+        var:req.session.var,
+        //profile
+        image:req.session.image
       });
     })
 
@@ -65,7 +84,6 @@ router.get("/", withAuth, (req, res) => {
       res.status(500).json(err);
     });
 });
-
 
 router.get('/edit/:id', withAuth, (req, res) => {
   Post.findByPk(req.params.id, {
@@ -86,7 +104,15 @@ router.get('/edit/:id', withAuth, (req, res) => {
       },
       {
         model: User,
-        attributes: ['first_name', 'last_name']
+        attributes: [
+          'id',
+          'first_name', 
+          'last_name',
+          'role',
+          'email',
+          'knowledgeable_in',
+          'image'
+        ]
       }
     ]
   })
