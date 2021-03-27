@@ -56,6 +56,16 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    //For the URL
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    //Room for any extra data
+    data: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     hooks: {
