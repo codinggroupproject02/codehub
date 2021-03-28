@@ -30,13 +30,13 @@ router.get("/register", (req, res) => {
   res.render("register");
 });
 
-router.get("/post", (req, res) => {
-  console.log('Skills value: '+req.session.skills);
+router.get("/post/:id", (req, res) => {
+
   Post.findAll({
     where: {
       type: "forum",
-      // [Op.or]: [{ skills: 1 }, { skills: 2 }],
-      skills: req.session.skills
+      // Get the value from the
+      skills: req.params.id,
     },
     attributes: [
       "id",
@@ -89,7 +89,7 @@ router.get("/post", (req, res) => {
         var: req.session.var,
         image: req.session.image,
         //for the skill selection
-        skill: req.session.skill
+        skills: req.session.skills, //<- no need anymore
       });
     })
 

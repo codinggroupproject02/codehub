@@ -12,42 +12,49 @@ const postdata = [
     title: 'What are valid values for the id attribute in HTML?',
     content: 'When creating the id attributes for HTML elements, what rules are there for the value?',
     type: 'forum',
-    skills: 1,
+    skills: 2,
     user_id: 8
   },
   {
     title: 'Redirect from an HTML page',
     content: 'Is it possible to set up a basic HTML page to redirect to another page on load?',
     type: 'forum',
-    skills: 1,
+    skills: 3,
     user_id: 1
   },
   {
     title: 'Local Storage vs Cookies',
     content: 'I want to reduce load times on my websites by moving all cookies into local storage since they seem to have the same functionality.',
     type: 'forum',
-    skills: 1,
+    skills: 4,
     user_id: 4
   },
   {
     title: 'Inventory management system',
     content: 'We currenly recording items in excel and needs a more responsive web site. Budget $1500',
     type: 'bounties',
-    skills: 1,
+    skills: 5,
     user_id: 4
   },
   {
     title: 'Web profile',
     content: 'Hoping to get some help with adding CSS to the HTML profile. Budget $50',
     type: 'bounties',
-    skills: 1,
+    skills: 6,
     user_id: 7
   },
   {
     title: 'Social media website',
     content: 'We have created the website and already have a working local version. Need help connecting it to Heroku server',
     type: 'forum',
-    skills: 1,
+    skills: 7,
+    user_id: 1
+  },
+  {
+    title: 'Lorem ipsum',
+    content: 'Nunc auctor malesuada pharetra est.',
+    type: 'forum',
+    skills: 7,
     user_id: 1
   },
 ];
