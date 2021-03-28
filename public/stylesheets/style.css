@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+  margin: auto;
   padding: 0;
   box-sizing: border-box;
 }
@@ -37,6 +37,8 @@ header {
   width: 100%;
   color: rgb(190, 189, 189);
   margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .about {
@@ -46,24 +48,36 @@ header {
 
 .about h1 {
   width: auto;
-  overflow: hidden; 
+  overflow: hidden;
   border-right: .15em solid orange;
   white-space: nowrap;
   margin: 0 auto;
   display: inline-block;
-  animation: 
+  animation:
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
 }
 
 @keyframes typing {
-  from { max-width: 0 }
-  to { max-width: 100% }
+  from {
+    max-width: 0
+  }
+
+  to {
+    max-width: 100%
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: orange;
+  }
 }
 
 .about p {
@@ -72,27 +86,44 @@ header {
   line-height: 1.7;
 }
 
-.description{
-  animation:2.5s ease 0s normal forwards 1 fadein;
-  -webkit-animation:2.5s ease 0s normal forwards 1 fadein;
-  opacity:1
+.description {
+  animation: 2.5s ease 0s normal forwards 1 fadein;
+  -webkit-animation: 2.5s ease 0s normal forwards 1 fadein;
+  opacity: 1
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0
   }
-  
-  @keyframes fadein{
-      0%{opacity:0}
-      80%{opacity:0}
-      100%{opacity:1}
+
+  80% {
+    opacity: 0
   }
-  @-webkit-keyframes fadein{
-    0%{opacity:0}
-    80%{opacity:0}
-    100%{opacity:1}
+
+  100% {
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0
+  }
+
+  80% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
 }
 
 .arrow {
   display: flex;
   justify-content: center;
-  margin-top: 18%;
+  margin-top: 30vh;
 }
 
 .glyphicon-chevron-down {
@@ -103,29 +134,58 @@ header {
 }
 
 @keyframes bounce {
-  0%   {top: 0px;}
-  25%  {top: 50px;}
-  50%  {top: 0px;}
-  75%  {top: 50px;}
-  100% {top: 0px;}
+  0% {
+    top: 0px;
+  }
+
+  25% {
+    top: 50px;
+  }
+
+  50% {
+    top: 0px;
+  }
+
+  75% {
+    top: 50px;
+  }
+
+  100% {
+    top: 0px;
+  }
 }
 
 @-webkit-keyframes bounce {
-  0%   {top: 0px;}
-  25%  {top: 50px;}
-  50%  {top: 0px;}
-  75%  {top: 50px;}
-  100% {top: 0px;}
+  0% {
+    top: 0px;
+  }
+
+  25% {
+    top: 50px;
+  }
+
+  50% {
+    top: 0px;
+  }
+
+  75% {
+    top: 50px;
+  }
+
+  100% {
+    top: 0px;
+  }
 }
 
-.container {
-margin-bottom: 20%;
-background-color: #718484;
-width: 100%;
-min-height: 100vh;
+#about {
+  margin-bottom: 20%;
+  background-color: #718484;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 5%;
 }
 
-.row {
+.services{
   margin: 15rem auto 0 3rem;
   display: flex;
   flex-direction: row;
@@ -158,7 +218,7 @@ min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 5%;
+  min-height: 95vh;
 }
 
 .login-form {
@@ -175,9 +235,13 @@ min-height: 100vh;
   width: 25%;
 }
 
+.register {
+  padding-top: 7%;
+}
+
 .register-form {
   width: 50%;
-  margin: 0 auto 5% auto;
+  margin: 0 auto 2% auto;
   background-color: #ccc;
   padding: 1% 2% 2%;
   border: 1px solid;
@@ -189,192 +253,367 @@ min-height: 100vh;
   margin-bottom: 2%;
 }
 
+.user-name-register {
+  display: flex;
+  flex-direction: row;
+}
+
+.name-register {
+  margin-left: 0;
+}
+
 li {
   list-style-type: none;
 }
 
-.commentAlignment{
+.commentAlignment {
   margin-left: 15%;
   margin-right: 10%;
 }
 
-.cardWithComments{
-  /*border: 1px solid;*/
+.cardWithComments {
   margin-bottom: 0;
-  padding: 15px;
-
-  text-align: center;
+  padding: 2rem 3%;
+  text-align: -webkit-auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.headlinePosts{
+.post-body {
+  margin: 0;
+}
+
+/******** USER PROFILE POSTS ********/
+.profile-posts {
+  background-color: #718484;
+  padding: 5%;
+}
+
+element.style {
+  background: rgb(211, 211, 211);
+}
+
+.headlinePosts {
   position: absolute;
   top: 100px;
   bottom: 0px;
 }
 
-.headlinePost-title{
-  display:flex;
+.headlinePost-title {
+  display: flex;
   align-items: center;
 }
 
-.headlinePosts div:hover{
+.headlinePosts div:hover {
   background-color: lightblue;
 }
 
 .headlineBackTop {
-  position: -webkit-sticky; /* Safari */
+  position: -webkit-sticky;
+  /* Safari */
   position: sticky;
   top: 0;
   text-align: center;
-  /*border: 2px solid lightblue;*/
-  background-color:lightblue ;
-}
-/* PERSONAL PROFILE STYLES */
-.profile {
-  background-color: #ccc;
-  margin: auto;
+  background-color: lightblue;
 }
 
+/****** PERSONAL PROFILE STYLES *******/
 .page-title {
+  display: flex;
+  justify-content: center;
   width: 50%;
-  margin: auto;
+  margin: 0 auto;
+  padding: 2% 0;
+  color: rgb(197, 195, 195);
 }
 
-.page-title h2 {
-  font-size: 3.5vw;
+.page-title h1, h3 {
+  font-size: 3.2vw;
+  font-weight: normal;
+  padding-bottom: 1%;
+  border-bottom: 3px solid;
 }
 
 .post-form {
   width: 50%;
-  margin: 0 auto 8% auto;
-  padding: 0 2% 2% 2%;
+  padding: 0 5% 0 5%;
+  margin: 0;
 }
 
-.user-bio {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
+.profile {
+  margin: auto;
+  background-color: #36454f;
+  padding-top: 5%;
+}
+
+.user-profile-img {
+  height: 175px;
+  width: 189px;
+  margin: 0 auto 15% auto;
 }
 
 .user-about {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-left: 2%;
-  margin-right: 10%;
+  margin: 0 10% 2% 3%;
   font-size: 1.1vw;
   line-height: 1.5;
+  border-radius: 5%;
+  padding: 0 3% 1%;
 }
 
-.user-bio img {
-  height: 250px;
-  width: 250px;
-  margin: 30px 30px 0 30px;
-  border-radius: 50%;
+.user-about h4 {
+  padding-bottom: 5%;
+  margin-top: 0;
+  font-size: 3vw;
+  color: rgb(197, 195, 195);
 }
+
+.user-about p {
+  font-size: 1.3vw;
+  color: rgb(197, 195, 195);
+}
+
+.user-about a {
+  color: rgb(137, 151, 214);
+}
+
+.user-section {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15%;
+}
+
+.highlighter {
+  background-color: #A7776B;
+  padding: 2% 5%;
+  border-radius: 50px;
+}
+
 
 .edit-post-btn {
-  width: 5%;
-  margin: 0 auto 5% auto;
+margin: 0;
+  /* margin: 0 auto 5% auto; */
 }
+
 /*  END */
 
 
+/******** FORUM POSTS START ********/
+.forum-posts {
+  padding: 5%;
+}
 
-  /* USER PROFILES STYLE START */
-  .page-title {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3%;
-  }
 
-  .page-title h1{
-    border-bottom: 1px solid;
-  }
+/* USER PROFILES STYLE START */
 
-  .user-profiles {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 5%;
-    padding: 0 8%;
-  }
 
-  .card {
-    border: 1px solid;
-    margin-bottom: 15%;
-    padding: 15px;
-    transition: box-shadow 1s;
-  }
+.user-profiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5%;
+  padding: 0 8%;
+}
 
-  .card:hover {
-    box-shadow: 0 0 3px #515151;
-  }
+.card {
+  border: 1px solid;
+  margin-bottom: 15%;
+  padding: 15px;
+  transition: box-shadow 1s;
+}
 
-  .card-title {
-    font-size: 1.5vw;
-  }
+.card:hover {
+  box-shadow: 0 0 3px #515151;
+}
 
-  .profile-card-img {
-    height: 275px;
-    width: 200px;
-    margin: auto;
-    object-fit: scale-down;
-  }
+.card-title {
+  font-size: 1.5vw;
+}
 
-  .profile-links {
-    display: flex;
-    justify-content: center;
-  }
+.profile-card-img {
+  height: 275px;
+  width: 200px;
+  margin: auto;
+  object-fit: scale-down;
+}
 
-  .profile-links a {
-    margin: 0 3%;
-  }
-  /* USER PROFILE STYLE END */
+.profile-links {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-links a {
+  margin: 0 3%;
+}
+
+/* USER PROFILE STYLE END */
 
 /******************************************/
 
-  /* EDIT POST FORM START */
+/* EDIT POST FORM START */
 
-  .edit-post-form {
-    width: 50%;
-    margin: auto;
-    padding: 0 2%;
-    border: 1px solid;
-    border-radius: 30px;
-  }
+.edit-post-form {
+  width: 50%;
+  margin: auto;
+  padding: 0 2%;
+  border: 1px solid;
+  border-radius: 30px;
+}
 
-  .post-details {
-    margin-bottom: 3%;
-  }
+.post-details {
+  margin-bottom: 3%;
+}
 
-  .button-options {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 5%;
-  }
+.button-options {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 5%;
+}
 
-  .comment-form {
-    width: 30%;
-    margin: auto;
-    padding-top: 3%;
-  }
-  /* EDIT POST FORM END */
+.comment-form {
+  width: 30%;
+  margin: auto;
+  padding-top: 3%;
+}
 
-  footer {
-    position: sticky;
-    top: 100%;
-    border-top: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    padding: 1%;
-    font-size: 110%;
-  }
-  
+/* EDIT POST FORM END */
 
-  .dropdown-menu{
-    display: flex;
-    flex-direction: column;
+/********** FORUM COMMENTS STYLING START ***********/
+.content-item {
+  padding: 30px 0;
+  background-color: #FFFFFF;
+}
 
-  }
+.content-item.grey {
+  background-color: #F0F0F0;
+  padding: 50px 0;
+  height: 100%;
+}
+
+.content-item h2 {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 45px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.content-item h3 {
+  font-weight: 400;
+  font-size: 20px;
+  color: #555555;
+  margin: 10px 0 15px;
+  padding: 0;
+}
+
+.content-headline {
+  height: 1px;
+  text-align: center;
+  margin: 20px 0 70px;
+}
+
+.content-headline h2 {
+  background-color: #FFFFFF;
+  display: inline-block;
+  margin: -20px auto 0;
+  padding: 0 20px;
+}
+
+.grey .content-headline h2 {
+  background-color: #F0F0F0;
+}
+
+.content-headline h3 {
+  font-size: 14px;
+  color: #AAAAAA;
+  display: block;
+}
+
+.comments-row {
+  color: white;
+}
+
+#comments {
+  box-shadow: 0 -1px 6px 1px rgba(0, 0, 0, 0.1);
+  background-color: #849170;
+}
+
+#comments form {
+  margin-bottom: 30px;
+}
+
+
+#comments .media {
+  border-top: 1px dashed #DDDDDD;
+  padding: 20px 0;
+  margin: 0;
+}
+
+#comments .media>.pull-left {
+  margin-right: 20px;
+}
+
+#comments .media img {
+  max-width: 100px;
+  border: 1px solid;
+}
+
+#comments .media h4 {
+  margin: 0 0 10px;
+}
+
+#comments .media h4 span {
+  font-size: 14px;
+  float: right;
+  color: #999999;
+}
+
+#comments .media p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+#comments .media-detail {
+  margin: 0;
+}
+
+#comments .media-detail li {
+  color: #F0F0F0;
+  font-size: 1.2vw;
+  padding-right: 10px;
+  font-weight: 600;
+}
+
+#comments .media-detail a:hover {
+  text-decoration: underline;
+}
+
+#comments .media-detail li:last-child {
+  padding-right: 0;
+}
+
+#comments .media-detail li i {
+  color: #666666;
+  font-size: 1.7vw;
+  margin-right: 10px;
+}
+/********** FORUM COMMENTS STYLING START ***********/
+
+footer {
+  position: sticky;
+  top: 100%;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  font-size: 110%;
+}
+/*************** FORUM DROP DOWN MENU ***********************/
+
+.dropdown-menu{
+  display: flex;
+  flex-direction: column;
+}

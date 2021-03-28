@@ -1,13 +1,16 @@
-{{!-- {{#if loggedIn}} --}}
 {{#each this}}
-<div class="commentAlignment">
-  <section class="comment">
-    <div class="text" style="font-size: larger;">
-      {{comment_text}}
-    </div>
-    <div class="meta" style="text-decoration: underline; font-style: oblique; text-align:right;">
-      {{user.first_name}} {{user.last_name}} on {{format_date created_at}}
-    </div>
+<div class="media">
+  {{#if image}}
+  <img src="{{image}}" alt='withImage' class="pull-left user-comment-img">
+  {{else}}
+  <img src="img/no_image.png" alt='noImage' class="pull-left user-comment-img">
+  {{/if}}
+  <div class="media-body">
+    <h4 class="media-heading">{{user.first_name}} {{user.last_name}}</h4>
+    <p>{{comment_text}}</p>
+    <ul class="list-unstyled list-inline media-detail pull-left">
+      <li><i class="fa fa-calendar"></i>{{format_date created_at}}</li>
+    </ul>
+  </div>
 </div>
 {{/each}}
-{{!-- {{/if}} --}}
