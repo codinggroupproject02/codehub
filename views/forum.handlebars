@@ -1,7 +1,13 @@
-<br>
-<br>
-<div>
-<br>
+<div class="dropdown" style="padding-top: 5%; margin-bottom: 3%">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" onClick=test({{skills}})>Link 1</a>
+    <a class="dropdown-item" href="#">Link 2</a>
+    <a class="dropdown-item" href="#">Link 3</a>
+  </div>
+</div>
 <br>
 <br>
 <table id='top'>
@@ -18,9 +24,6 @@
 {{!-- Comment: This is for the post --}}
 {{/each}}
 
-{{!-- {{#if loggedIn}} --}}
-<script src="/javascript/comment.js"></script>
-{{!-- {{/if}} --}}
 </td>
 <td style="border-left-style: solid;">
   <section class="headlinePosts">
@@ -43,3 +46,8 @@
 </td>
 </tr>
 </table>
+
+{{!-- {{#if loggedIn}} --}}
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/reload.js"></script>
+{{!-- {{/if}} --}}

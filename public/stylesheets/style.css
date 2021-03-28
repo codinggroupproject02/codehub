@@ -372,3 +372,9 @@ li {
     font-size: 110%;
   }
   
+
+  .dropdown-menu{
+    display: flex;
+    flex-direction: column;
+
+  }
