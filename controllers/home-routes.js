@@ -73,12 +73,19 @@ router.get("/post/:id", (req, res) => {
     ],
   })
     .then((dbPostData) => {
+
       if (!dbPostData) {
         res
           .status(404)
           .json({ message: "No post found with this type of post" });
         return;
       }
+
+      //Result where there isn't data to display
+      if(dbPostData == ''){
+        res.render("blank");
+      }else{
+
       // serialize the data
       const posts = dbPostData.map((post) => post.get({ plain: true }));
 
@@ -92,6 +99,7 @@ router.get("/post/:id", (req, res) => {
         //for the skill selection
         skills: req.session.skills, //<- no need anymore
       });
+    }
     })
 
     .catch((err) => {
