@@ -11,7 +11,7 @@ ProLang.init(
             autoIncrement: true
         },
         program:{
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
         }
     },

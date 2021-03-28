@@ -18,11 +18,11 @@ Competence.init(
                 key: "id",
             },
         },
-        competence_id:{
+        ProLang_id:{
             type: DataTypes.INTEGER,
             allowNull: false,
             references:{
-                model: "post",
+                model: "ProLang",
                 key: "id",
             },
         },
