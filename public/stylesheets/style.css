@@ -617,3 +617,10 @@ footer {
   display: flex;
   flex-direction: column;
 }
+
+/*************** INPUT STYLE *********************************/
+
+.input-color{
+  background-color: #1D1C14; 
+  color:white
+}
