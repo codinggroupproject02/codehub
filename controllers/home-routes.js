@@ -30,6 +30,7 @@ router.get("/register", (req, res) => {
   res.render("register");
 });
 
+//Filter skills
 router.get("/post/:id", (req, res) => {
 
   Post.findAll({
