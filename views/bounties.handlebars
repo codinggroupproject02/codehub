@@ -1,39 +1,51 @@
-<table id='top'>
-<tr>
-  <td style="width: 90%;">
-{{#each posts as |post|}}
-<li>
-  {{> forum-info post}}
-</li>
+<section id='top' class="bounties-forum">
+  {{!-- <div class="bounties-posts"> --}}
+    <div>
+      <h1>Bounties</h1>
+      {{#each posts as |post|}}
+      <li>
+        {{> forum-info post}}
+      </li>
 
-{{> comment-info post.comments}}
+      <div id="comments">
+        <div class="container">
+          <div class="row comments-row">
+            <div class="col-sm-8">
+              <h2>Comments</h2>
 
-<br><hr>
-{{!-- Comment: This is for the post --}}
-{{/each}}
+              {{!-- COMMENT START --}}
+              {{> comment-info post.comments}}
+              {{!-- COMMENT END --}}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{!-- Comment: This is for the post --}}
+      {{/each}}
 
-{{!-- {{#if loggedIn}} --}}
-<script src="/javascript/comment.js"></script>
-{{!-- {{/if}} --}}
-</td>
-<td style="border-left-style: solid;">
-  <section class="headlinePosts">
-  {{#each posts as |post|}}
-  <a href="#{{post.id}}">
-  <div style="height: 100px; border:1px black solid; ">
-  <h4>{{post.title}}</h4>
-  </div>
-  </a>
-  {{/each}}
-  </section>
+      {{#if loggedIn}}
+      <script src="/javascript/comment.js"></script>
+      {{/if}}
+    </div>
+    {{!-- LATEST POSTS --}}
+    <aside class="latest-posts">
+      <h2>Latest posts</h2>
+      <div class="latest-post-list">
+        <div>
+        {{#each posts as |post|}}
+        <a href="#{{post.id}}">
+          <div class="latest-post-title">
+            <h4>{{post.title}}</h4>
+          </div>
+        </a>
+        {{/each}}
+        </div>
+        {{!-- Relative button to go to top --}}
+        <div class="headlineBackTop">
+          <h4><a href="#top">Back to the top!</a></h4>
+        </div>
+      </div>
 
-  {{!-- Relative button to go to top --}}
-  <a href="#top">
-  <div class="headlineBackTop">
-    <h4>Back to the top!</h4>
-  </div>
-  </a>
-
-</td>
-</tr>
-</table>
+    </aside>
+  {{!-- </div> --}}
+</section>

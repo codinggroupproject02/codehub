@@ -6,7 +6,19 @@
       {{> forum-info post}}
     </li>
 
-    {{> comment-info post.comments}}
+        <div id="comments">
+        <div class="container">
+          <div class="row comments-row">
+            <div class="col-sm-8">
+              <h2>Comments</h2>
+
+              {{!-- COMMENT START --}}
+              {{> comment-info post.comments}}
+              {{!-- COMMENT END --}}
+            </div>
+          </div>
+        </div>
+      </div>
 
     <br>
     {{!-- Comment: This is for the post --}}
@@ -29,10 +41,10 @@
           </div>
         </a>
         {{/each}}
-      </section>
+      </section> --}}
 
       {{!-- Relative button to go to top --}}
-      <a href="#top">
+      {{!-- <a href="#top">
         <div class="headlineBackTop">
           <h4>Back to the top!</h4>
         </div>
