@@ -75,7 +75,7 @@ router.get("/", withAuth, (req, res) => {
         //My profile
         user_id: req.session.user_id,
         first_name: req.session.first_name,
-        //last_name: req.session.last_name,
+        last_name: req.session.last_name,
         email: req.session.email,
         image: req.session.image,
         knowledgeable_in: req.session.knowledgeable_in,
