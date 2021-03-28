@@ -20,7 +20,7 @@ const postdata = [
     content: 'Is it possible to set up a basic HTML page to redirect to another page on load?',
     type: 'forum',
     skills: 3,
-    user_id: 1
+    user_id: 3
   },
   {
     title: 'Local Storage vs Cookies',
