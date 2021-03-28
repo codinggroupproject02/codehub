@@ -161,7 +161,7 @@ padding-top: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 5%;
+  min-height: 95vh;
 }
 
 .login-form {
@@ -178,9 +178,13 @@ padding-top: 5%;
   width: 25%;
 }
 
+.register {
+  padding-top: 7%;
+}
+
 .register-form {
   width: 50%;
-  margin: 0 auto 5% auto;
+  margin: 0 auto 2% auto;
   background-color: #ccc;
   padding: 1% 2% 2%;
   border: 1px solid;
@@ -191,6 +195,15 @@ padding-top: 5%;
   height: 4vw;
   margin-bottom: 2%;
 }
+.user-name-register {
+  display: flex;
+  flex-direction: row;
+}
+
+.name-register {
+  margin-left: 0;
+}
+
 
 li {
   list-style-type: none;
@@ -243,6 +256,7 @@ element.style {
 /* PERSONAL PROFILE STYLES */
 .profile {
   background-color: #ccc;
+  margin: auto;
 }
 
 .page-title {
@@ -335,6 +349,7 @@ element.style {
     height: 275px;
     width: 200px;
     margin: auto;
+    object-fit: scale-down;
   }
 
   .profile-links {

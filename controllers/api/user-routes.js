@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const { User, Post, Vote, Comment } = require("../../models");
-const withAuth = require('../../utils/auth');
 
 // GET /api/users
 router.get("/", (req, res) => {
@@ -24,7 +23,7 @@ router.get("/:id", (req, res) => {
     include: [
       {
         model: Post,
-        attributes: ["id", "title", "type", "skills","content", "created_at"],
+        attributes: ["id", "title", "type", "skills", "content", "created_at"],
       },
       //Include the Comment model here
       {
@@ -64,7 +63,8 @@ router.post("/", (req, res) => {
     last_name: req.body.last_name,
     email: req.body.email,
     password: req.body.password,
-    knowledgeable_in: req.body.knowledgeable_in
+    knowledgeable_in: req.body.knowledgeable_in,
+    //image and data is not entered
   }).then((dbUserData) => {
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
@@ -73,7 +73,13 @@ router.post("/", (req, res) => {
       //Extra to determine the role
       req.session.role = dbUserData.role;
       req.session.var = false;
-      console.log('Userdata: ',dbUserData);
+      //for the My profile
+      req.session.image = dbUserData.image;
+      req.session.first_name = dbUserData.first_name;
+      req.session.last_name = dbUserData.last_name;
+      req.session.knowledgeable_in = dbUserData.knowledgeable_in;
+
+      console.log("Userdata: ", dbUserData);
       res.json(dbUserData);
     });
   });
@@ -103,6 +109,11 @@ router.post("/login", (req, res) => {
       //to seperate the roles
       req.session.role = dbUserData.role;
       req.session.var = false;
+      //for the My profile
+      req.session.image = dbUserData.image;
+      req.session.first_name = dbUserData.first_name;
+      req.session.last_name = dbUserData.last_name;
+      req.session.knowledgeable_in = dbUserData.knowledgeable_in;
 
       res.json({ user: dbUserData, message: "You are now logged in!" });
     });
@@ -120,7 +131,7 @@ router.post("/logout", (req, res) => {
 });
 
 // PUT /api/users/1
-router.put("/:id", withAuth, (req, res) => {
+router.put("/:id", (req, res) => {
   User.update(req.body, {
     individualHooks: true,
     where: {
@@ -141,7 +152,7 @@ router.put("/:id", withAuth, (req, res) => {
 });
 
 // DELETE /api/users/1
-router.delete("/:id", withAuth, (req, res) => {
+router.delete("/:id", (req, res) => {
   User.destroy({
     where: {
       id: req.params.id,

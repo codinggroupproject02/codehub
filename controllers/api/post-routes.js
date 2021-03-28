@@ -94,7 +94,7 @@ router.get("/:id", (req, res) => {
 });
 
 //Create a new Post
-router.post("/", withAuth, (req, res) => {
+router.post("/", (req, res) => {
   Post.create({
     title: req.body.title,
     content: req.body.content,
@@ -110,7 +110,7 @@ router.post("/", withAuth, (req, res) => {
 });
 
 //UPVOTE a Post
-router.put("/upvote", withAuth, (req, res) => {
+router.put("/upvote", (req, res) => {
   //res, req
   // custom static method created in models/Post.js
   Post.upvote(req.body, { Vote })
@@ -123,7 +123,7 @@ router.put("/upvote", withAuth, (req, res) => {
 });
 
 //Update a Post
-router.put("/:id", withAuth, (req, res) => {
+router.put("/:id", (req, res) => {
   Post.update(
     {
       //Things that can be changed in Post
@@ -152,7 +152,7 @@ router.put("/:id", withAuth, (req, res) => {
 });
 
 //Delete a Post
-router.delete("/:id", withAuth, (req, res) => {
+router.delete("/:id", (req, res) => {
   Post.destroy({
     where: {
       id: req.params.id,

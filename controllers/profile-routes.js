@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../models')
 
-router.get('/', (req, res) => {    
+router.get('/', (req, res) => {
     User.findAll({
         where: { role: "coach"},
         attributes: [
@@ -9,7 +9,8 @@ router.get('/', (req, res) => {
             'role',
             'first_name',
             'last_name',
-            'knowledgeable_in'
+            'knowledgeable_in',
+            'image'
         ]
     })
     .then(dbUserData => {
@@ -18,7 +19,8 @@ router.get('/', (req, res) => {
             users,
             loggedIn: req.session.loggedIn,
             role: req.session.role,
-            var: req.session.var
+            var: req.session.var,
+            image: req.session.image
          });
     })
     .catch(err => {

@@ -6,14 +6,14 @@ const sequelize = require('./config/connection');
 const path = require('path');
 const http = require('http');
 const session = require('express-session');
-const helpers = require('./utils/helpers');
+// const helpers = require('./utils/helpers');
 const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const formatMessage = require('./utils/messages')
 const { userJoin, getCurrentUser, userLeave, getRoomUsers } = require('./utils/user')
 
-
+const helpers = require('./utils/helpers');
 const hbs = exphbs.create({ helpers });
 
 

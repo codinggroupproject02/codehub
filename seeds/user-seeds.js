@@ -3,6 +3,8 @@ const { User, Post } = require('../models');
 
 const userdata = [
   {
+    image: 'img/11.jpg',
+    data: '',
     role: 'coach',
     first_name: 'Rose	',
     last_name: 'Bond',
@@ -11,6 +13,8 @@ const userdata = [
     knowledgeable_in: 'R'   
   },
   {
+    image: '',
+    data: '',
     role: 'user',
     first_name: 'Harry',
     last_name: 'Nash',
@@ -19,6 +23,8 @@ const userdata = [
     knowledgeable_in: 'python'   
   },
   {
+    image: 'img/10.jpg',
+    data: '',
     role: 'coach',
     first_name: 'Dominic',
     last_name: 'Duncan',
@@ -27,6 +33,8 @@ const userdata = [
     knowledgeable_in: 'CSS'   
   },
   {
+    image: 'img/13.jpg',
+    data: '',
     role: 'coach',
     first_name: 'Richard',
     last_name: 'Mackenzie',
@@ -35,6 +43,8 @@ const userdata = [
     knowledgeable_in: 'excel'
   },
   {
+    image: '',
+    data: '',
     role: 'user',
     first_name: 'Elizabeth',
     last_name: 'Davies',
@@ -43,6 +53,8 @@ const userdata = [
     knowledgeable_in: 'JavaScript'
   },
   {
+    image: '',
+    data: '',
     role: 'user',
     first_name: 'Bella',
     last_name: 'Gibson',
@@ -51,7 +63,9 @@ const userdata = [
     knowledgeable_in: 'python'
   },
   {
-    role: 'user',
+    image: 'img/12.png',
+    data: '',
+    role: 'coach',
     first_name: 'James',
     last_name: 'Bower',
     email: 'james@weather.com',
@@ -59,7 +73,9 @@ const userdata = [
     knowledgeable_in: 'sequelize'
   },
   {
-    role: 'user',
+    image: '',
+    data: '',
+    role: 'coach',
     first_name: 'Alison',
     last_name: 'Grant',
     email: 'alison@imdb.com',
@@ -67,6 +83,8 @@ const userdata = [
     knowledgeable_in: 'bootstrap'
   },
   {
+    image: '',
+    data: '',
     role: 'user',
     first_name: 'Austin',
     last_name: 'Vaughan',
@@ -75,6 +93,8 @@ const userdata = [
     knowledgeable_in: 'express'
   },
   {
+    image: '',
+    data: '',
     role: 'user',
     first_name: 'Benjamin',
     last_name: 'Sutherland',
@@ -83,6 +103,8 @@ const userdata = [
     knowledgeable_in: 'MySql'
   },
   {
+    image: '',
+    data: '',
     role: 'user',
     first_name: 'Alexander',
     last_name: 'Wilkins',
@@ -91,6 +113,8 @@ const userdata = [
     knowledgeable_in: 'CSS'
   },
   {
+    image: '',
+    data: '',
     role: 'user',
     first_name: 'Theresa',
     last_name: 'Morgan',

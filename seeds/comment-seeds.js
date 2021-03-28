@@ -64,8 +64,8 @@ const commentdata = [
   {
     comment_text:
       'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.',
-    user_id: 4,
-    post_id: 9
+    user_id: 11,
+    post_id: 8
   },
   {
     comment_text:

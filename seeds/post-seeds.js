@@ -55,7 +55,7 @@ const postdata = [
     content: 'There will be some content here',
     type: 'forum',
     skills: 1,
-    user_id: 1
+    user_id: 11
   },
   {
     title: 'Duis ac nibh.',

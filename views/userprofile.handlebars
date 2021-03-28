@@ -2,22 +2,24 @@
   <div class="page-title">
     <h1>Profile</h1>
   </div>
-  <h2>{{first_name}} {{last_name}}</h2>
+  <h3>{{role}}</h3>
   <div class="user-bio">
-    <img src="https://www.raincitycorp.com/wp-content/uploads/2019/11/blank-profile-picture-973460_640.png"
-      alt="profile picture">
+    {{#if image}}
+    <img src="{{image}}" alt='withImage' class="profile-card-img headlinePost-title">
+    {{else}}
+    <img src="img/no_image.png" alt='noImage' class="profile-card-img headlinePost-title">
+    {{/if}}
+  </div>
     <div class="user-about">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugit ad voluptatum nobis. Facere at unde
-        perspiciatis aut molestias placeat.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos soluta ipsum culpa consequuntur ipsam sint dolores
-        laudantium unde fugiat accusantium? Quidem animi corrupti dicta, odit id recusandae accusamus laudantium
-        architecto nulla eveniet mollitia saepe natus.</p>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, tenetur veniam, id quia nihil incidunt dicta
-        ipsum
-        earum animi rem doloribus distinctio dolore.</p>
+      <p>First Name: {{first_name}}</p>
+      <p>Last Name: {{last_name}}</p>
+      <p>Email: {{email}}</p>
+      <p>Username : {{knowledgeable_in}}</p>
     </div>
   </div>
 
+</section>
+<section>
 
   <form class="post-form">
     <div class="form-group">
@@ -70,8 +72,6 @@
   </ul>
 </section>
 {{/if}}
-
-
 
 
 <script src="/javascript/add-post.js"></script>
