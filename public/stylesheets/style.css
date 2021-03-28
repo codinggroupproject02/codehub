@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+  margin: auto;
   padding: 0;
   box-sizing: border-box;
 }
@@ -125,6 +125,7 @@ margin-bottom: 20%;
 background-color: #718484;
 width: 100%;
 min-height: 100vh;
+padding-top: 5%;
 }
 
 .row {
@@ -203,9 +204,17 @@ li {
 .cardWithComments{
   /*border: 1px solid;*/
   margin-bottom: 0;
-  padding: 15px;
+  scroll-padding-inline: auto;
+  text-align: -webkit-auto;
+}
 
-  text-align: center;
+/******** USER PROFILE POSTS ********/
+.profile-posts {
+  padding: 5%;
+}
+
+element.style {
+  background: rgb(211, 211, 211);
 }
 
 .headlinePosts{
@@ -285,7 +294,7 @@ li {
 
 /******** FORUM POSTS START ********/
 .forum-posts {
-  padding-top: 10%;
+  padding: 5%;
 }
 
 

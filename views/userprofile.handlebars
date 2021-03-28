@@ -48,7 +48,7 @@
 
 
 {{#if posts.length}}
-<section>
+<section class="profile-posts">
   <div class="page-title">
     <h2>My Posts</h2>
   </div>
@@ -56,7 +56,7 @@
   <ul>
     {{#each posts as |post|}}
     <li>
-      {{> forum-info post}}
+      {{> profile-posts post}}
     </li>
     <div class="edit-post-btn">
       <a href="/userprofile/edit/{{post.id}}" class="edit-link btn btn-warning">Edit post</a>
@@ -66,7 +66,6 @@
 
     <br>
     <hr>
-    {{!-- Comment: This is for the post --}}
     {{/each}}
   </ul>
 </section>
