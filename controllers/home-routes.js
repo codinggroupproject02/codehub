@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { Post, User, Vote, Comment } = require("../models");
 const sequelize = require("../config/connection");
+const { Op } = require("sequelize");
 
 router.get("/", (req, res) => {
 
@@ -32,7 +33,10 @@ router.get("/register", (req, res) => {
 
 router.get("/post", (req, res) => {
   Post.findAll({
-    where: { type: "forum"},
+    where: { 
+      type: "forum",
+      [Op.or]: [{skills:1},{skills:2}]
+    },
     attributes: [
       "id",
       "title",

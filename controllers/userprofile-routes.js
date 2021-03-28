@@ -1,13 +1,12 @@
-const router = require('express').Router();
+const router = require("express").Router();
 const sequelize = require("../config/connection");
-const withAuth = require('../utils/auth')
+const withAuth = require("../utils/auth");
 const { User, Post, Vote, Comment, ProLang, Competence } = require("../models");
 
-router.get("/", /*withAuth,*/ (req, res) => {
+router.get("/", withAuth, (req, res) => {
   Post.findAll({
     where: {
-      // user_id: req.session.user_id
-      user_id:11   //<- to test the user_id
+      user_id: req.session.user_id,
     },
     attributes: [
       "id",
@@ -45,20 +44,22 @@ router.get("/", /*withAuth,*/ (req, res) => {
       {
         model: User,
         attributes: [
-          'id',
-          'first_name', 
-          'last_name',
-          'role',
-          'email',
-          'knowledgeable_in',
-          'image'
+          "id",
+          "first_name",
+          "last_name",
+          "role",
+          "email",
+          "knowledgeable_in",
+          "image",
         ],
       },
     ],
   })
     .then((dbPostData) => {
       if (!dbPostData) {
-        res.status(404).json({ message: "No post found with this type of post" });
+        res
+          .status(404)
+          .json({ message: "No post found with this type of post" });
         return;
       }
       // serialize the data
@@ -67,17 +68,17 @@ router.get("/", /*withAuth,*/ (req, res) => {
       // pass data if logged in
       res.render("userprofile", {
         posts,
-        loggedIn:req.session.loggedIn,
+        loggedIn: req.session.loggedIn,
         //extra to isolate the coach view
-        role:req.session.role,
-        var:req.session.var,
+        role: req.session.role,
+        var: req.session.var,
         //My profile
         user_id: req.session.user_id,
         first_name: req.session.first_name,
         //last_name: req.session.last_name,
         email: req.session.email,
-        image:req.session.image,
-        knowledgeable_in:req.session.knowledgeable_in
+        image: req.session.image,
+        knowledgeable_in: req.session.knowledgeable_in,
       });
     })
 
@@ -87,53 +88,47 @@ router.get("/", /*withAuth,*/ (req, res) => {
     });
 });
 
-router.get('/edit/:id', withAuth, (req, res) => {
+router.get("/edit/:id", withAuth, (req, res) => {
   Post.findByPk(req.params.id, {
-    attributes: [
-      'id',
-      'title',
-      'content',
-      'created_at',
-    ],
+    attributes: ["id", "title", "content", "created_at"],
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
         include: {
           model: User,
-          attributes: ['first_name', 'last_name']
-        }
+          attributes: ["first_name", "last_name"],
+        },
       },
       {
         model: User,
         attributes: [
-          'id',
-          'first_name', 
-          'last_name',
-          'role',
-          'email',
-          'knowledgeable_in',
-          'image'
-        ]
-      }
-    ]
+          "id",
+          "first_name",
+          "last_name",
+          "role",
+          "email",
+          "knowledgeable_in",
+          "image",
+        ],
+      },
+    ],
   })
-    .then(dbPostData => {
+    .then((dbPostData) => {
       if (dbPostData) {
         const post = dbPostData.get({ plain: true });
-        
-        res.render('edit-post', {
+
+        res.render("edit-post", {
           post,
-          loggedIn: true
+          loggedIn: true,
         });
       } else {
         res.status(404).end();
       }
     })
-    .catch(err => {
+    .catch((err) => {
       res.status(500).json(err);
     });
 });
-
 
 module.exports = router;
