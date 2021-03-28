@@ -4,17 +4,16 @@ const sequelize = require("../config/connection");
 const { Op } = require("sequelize");
 
 router.get("/", (req, res) => {
-
-  if(req.session.role == 'coach'){
+  if (req.session.role == "coach") {
     req.session.var = true;
-  }else{
+  } else {
     req.session.var = false;
   }
 
   res.render("homepage", {
-    loggedIn: req.session.loggedIn, 
+    loggedIn: req.session.loggedIn,
     var: req.session.var,
-    first_name: req.session.first_name      
+    first_name: req.session.first_name,
   });
 });
 
@@ -33,9 +32,10 @@ router.get("/register", (req, res) => {
 
 router.get("/post", (req, res) => {
   Post.findAll({
-    where: { 
+    where: {
       type: "forum",
-      [Op.or]: [{skills:1},{skills:2}]
+      // [Op.or]: [{ skills: 1 }, { skills: 2 }],
+      skill: req.session.skill
     },
     attributes: [
       "id",
@@ -72,7 +72,9 @@ router.get("/post", (req, res) => {
   })
     .then((dbPostData) => {
       if (!dbPostData) {
-        res.status(404).json({ message: "No post found with this type of post" });
+        res
+          .status(404)
+          .json({ message: "No post found with this type of post" });
         return;
       }
       // serialize the data
@@ -81,10 +83,12 @@ router.get("/post", (req, res) => {
       // pass data if logged in
       res.render("forum", {
         posts,
-        loggedIn:req.session.loggedIn,
+        loggedIn: req.session.loggedIn,
         role: req.session.role,
         var: req.session.var,
-        image: req.session.image
+        image: req.session.image,
+        //for the skill selection
+        skill: req.session.skill
       });
     })
 

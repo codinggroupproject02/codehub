@@ -1,5 +1,12 @@
 const router = require("express").Router();
-const { User, Post, Vote, Comment, ProLang, Competence } = require("../../models");
+const {
+  User,
+  Post,
+  Vote,
+  Comment,
+  ProLang,
+  Competence,
+} = require("../../models");
 
 // GET /api/users
 router.get("/", (req, res) => {
@@ -78,6 +85,8 @@ router.post("/", (req, res) => {
       req.session.first_name = dbUserData.first_name;
       req.session.last_name = dbUserData.last_name;
       req.session.knowledgeable_in = dbUserData.knowledgeable_in;
+      //for the skill selection
+      req.session.skill = 1;
 
       console.log("Userdata: ", dbUserData);
       res.json(dbUserData);
@@ -114,6 +123,8 @@ router.post("/login", (req, res) => {
       req.session.first_name = dbUserData.first_name;
       req.session.last_name = dbUserData.last_name;
       req.session.knowledgeable_in = dbUserData.knowledgeable_in;
+      //for the skill selection
+      req.session.skill = 1;
 
       res.json({ user: dbUserData, message: "You are now logged in!" });
     });
