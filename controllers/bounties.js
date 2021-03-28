@@ -39,7 +39,6 @@ router.get("/", (req, res) => {
     ],
   })
     .then((dbPostData) => {
-      console.log('*******dbPostData: ' + dbPostData);
       if (!dbPostData) {
         res.status(404).json({ message: "No post found with this type of post" });
         return;

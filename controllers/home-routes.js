@@ -31,11 +31,12 @@ router.get("/register", (req, res) => {
 });
 
 router.get("/post", (req, res) => {
+  console.log('Skills value: '+req.session.skills);
   Post.findAll({
     where: {
       type: "forum",
       // [Op.or]: [{ skills: 1 }, { skills: 2 }],
-      skill: req.session.skill
+      skills: req.session.skills
     },
     attributes: [
       "id",

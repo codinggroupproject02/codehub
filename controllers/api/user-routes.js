@@ -86,7 +86,7 @@ router.post("/", (req, res) => {
       req.session.last_name = dbUserData.last_name;
       req.session.knowledgeable_in = dbUserData.knowledgeable_in;
       //for the skill selection
-      req.session.skill = 1;
+      req.session.skills = 1;
 
       console.log("Userdata: ", dbUserData);
       res.json(dbUserData);
@@ -124,7 +124,7 @@ router.post("/login", (req, res) => {
       req.session.last_name = dbUserData.last_name;
       req.session.knowledgeable_in = dbUserData.knowledgeable_in;
       //for the skill selection
-      req.session.skill = 1;
+      req.session.skills = 1;
 
       res.json({ user: dbUserData, message: "You are now logged in!" });
     });
