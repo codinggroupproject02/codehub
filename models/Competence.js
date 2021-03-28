@@ -18,7 +18,7 @@ Competence.init(
                 key: "id",
             },
         },
-        ProLang_id:{
+        prolang_id:{
             type: DataTypes.INTEGER,
             allowNull: false,
             references:{
