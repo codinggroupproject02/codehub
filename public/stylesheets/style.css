@@ -246,7 +246,8 @@ nav div {
 }
 
 .register {
-  padding-top: 7%;
+  padding-top: 150px;
+  min-height: 95vh;
 }
 
 .register-form {
