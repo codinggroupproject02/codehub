@@ -1,8 +1,9 @@
-<div class="page-title">
+<section class="coach-profiles">
+  <div class="page-title">
     <h1>Coach Profiles</h1>
-</div>
-<section class="user-profiles">
-  {{#each users}}
+  </div>
+  <div class="user-profiles">
+    {{#each users}}
     <div class="card">
       <div class="card-body">
         {{#if image}}
@@ -10,7 +11,7 @@
         {{else}}
         <img src="img/no_image.png" alt='noImage' class="profile-card-img headlinePost-title">
         {{/if}}
-        <h2 class="card-title">{{first_name}} {{last_name}}</h2>        
+        <h2 class="card-title">{{first_name}} {{last_name}}</h2>
         <span>{{role}}</span>
         <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, sunt?</p>
       </div>
@@ -24,5 +25,6 @@
         <a href="#" class="card-link">Full Profile</a>
       </div>
     </div>
-  {{/each}}
+    {{/each}}
+  </div>
 </section>

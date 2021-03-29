@@ -20,7 +20,9 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="/">Home</a></li>
+                    {{#if loggedIn}}
                     <li><a href="/chatroom">Coding Buddies</a></li>
+                    {{/if}}
                     <li><a href="/profiles">Coding Coaches</a></li>
                     <li><a href="/post/1">Forum</a></li>
                     {{#if var}}
