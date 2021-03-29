@@ -504,10 +504,11 @@ margin: 0;
 }
 
 .user-profiles {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 5%;
-  padding: 0 8%;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  gap: 12px;
 }
 
 .card {
