@@ -6,7 +6,7 @@
 
   The Coders Bay is an online forum where like minded individuals can post about all things that are code. If you need assistance with a project our coaches can work with you for a fee! Want a coding buddy? Join the chat room and get to know someone! Our goal is to provide a hub for knowledge and collaboration. Your next big project starts here!
 
-  ### Link:
+  ### Link: https://the-coders-bay-app.herokuapp.com/
 
   ## Table of Contents
 
@@ -16,9 +16,26 @@
   * [Contributing](#contributing)
   * [Test](#test)
   * [Questions](#questions)
-
+  
+  ### Technologies
+  * JavaScript
+  * Express
+  * Node.js
+  * Bootstrap
+  * Socket.io
+  * MySQL2
+  * bcrypt
+  * Express Handlebars
+  * Sequelize
+  
   ### Installation
   
+  This project requires mySQL to be installed.
+  
+  ```
+  git clone git@github.com:codinggroupproject02/codersbay.git
+  ```
+
   ```
   npm i
   ```
