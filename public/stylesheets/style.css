@@ -264,11 +264,8 @@ nav div {
 }
 
 .form-control {
-  height: auto;
-  width: fit-content;
-  margin-bottom: 2%;
-  align-items: center;
-  background-color: #A7776B;
+  height: 4vw;
+  margin-bottom: 5px;
   
 }
 
@@ -847,7 +844,7 @@ ul {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 	.chat-main {
 		display: block;
 	}
