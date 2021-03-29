@@ -29,11 +29,6 @@ nav div {
   justify-content: space-between;
 }
 
-.navbar {
-  border-radius: 0;
-  margin: 0;
-  border: 0;
-}
 
 .jumbotron {
   background-image: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url(../img/landing.png);
@@ -308,10 +303,19 @@ li {
   margin: 0;
 }
 
+.post-body h5 {
+  font-size: 2vw;
+}
+
+.post-body p {
+  font-size: 1.7vw;
+}
+
 /******** USER PROFILE POSTS ********/
 .profile-posts {
   background-color: #718484;
-  padding: 5%;
+  padding: 50px;
+  min-height: 63vh;
 }
 
 .headlinePost-title {
@@ -337,7 +341,7 @@ li {
   justify-content: center;
   width: 50%;
   margin: 0 auto;
-  padding: 2% 0;
+  padding: 30px 0;
   color: rgb(197, 195, 195);
 }
 
@@ -420,7 +424,15 @@ margin: 0;
   width: 100%;
   margin-bottom: 5%;
 }
-/*  END */
+
+.media-body h4 {
+  font-size: 2vw;
+}
+
+.media-body {
+  font-size: 1.2vw;
+}
+/*******  END *******/
 
 
 /******** FORUM STYLING START ********/
@@ -497,20 +509,21 @@ margin: 0;
   width: 100%;
   color: rgb(190, 189, 189);
   margin-bottom: 0;
-  padding: 5%;
+  padding: 100px;
 }
 
 .user-profiles {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0 20px;
+  justify-content: center;
+  /* padding: 0 20px; */
   gap: 12px;
 }
 
 .card {
   border: 1px solid;
-  margin-bottom: 15%;
+  margin-bottom: 15px;
   padding: 15px;
   transition: box-shadow 1s;
   background-color: #1D1B14;
@@ -521,7 +534,11 @@ margin: 0;
 }
 
 .card-title {
-  font-size: 1.5vw;
+  font-size: 1.8vw;
+}
+
+.card-text {
+  font-size: 1.2vw;
 }
 
 .profile-card-img {
@@ -626,6 +643,7 @@ margin: 0;
 
 .comments-row {
   color: white;
+  padding-top: 20px;
 }
 
 #comments {
@@ -828,6 +846,16 @@ ul {
 	flex: 5;
 }
 
+.chat-control{
+  height: auto;
+  width: fit-content;
+  margin-bottom: 2%;
+  align-items: center;
+  background-color: #A7776B;
+  padding: 5px 5px;
+  
+}
+
 @media screen and (max-width: 980px) {
   .jumbotron {
     display: flex;
@@ -844,7 +872,41 @@ ul {
 }
 
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  nav div {
+    display: block;
+  }
+  .navbar-brand {
+    font-size: 4vw;
+  }
+  .about {
+    margin-top: 400px;
+  }
+
+  .about h1 {
+    font-size: 5vw;
+  }
+  .about p {
+    font-weight: 400;
+    margin-top: 3%;
+    line-height: 1.7;
+    font-size: 3vw;
+  }
+  
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+  }
+
+  .content-description {
+    margin-bottom: 15px;
+  }
+
+  .about h2{
+    font-size: 2vw;
+  }
 	.chat-main {
 		display: block;
 	}
@@ -852,4 +914,37 @@ ul {
 	.chat-sidebar {
 		display: none;
 	}
+}
+
+
+@media screen and (max-width: 575px) {
+  .navbar-brand {
+    font-size: 5vw;
+  }
+
+  nav div {
+    display: block;
+  }
+
+  .nav-item {
+    font-size: 3vw;
+  }
+
+  .about {
+    margin-top: 300px;
+  }
+
+  .content-description p {
+    font-size: 2vw;
+  }
+
+  .glyphicon-chevron-down {
+    font-size: 6vw;
+  }
+
+  .profile-card-img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
 }
