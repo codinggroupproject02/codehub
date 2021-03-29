@@ -7,7 +7,7 @@
       <br> relationships in Tech!
       <br>
     {{#if loggedIn}}
-    <h2 class="description"><a href='#'> {{first_name}}, what's bugging you?! </a></h2>
+    <h2 class="description"><a href='#join_chatroom'> {{first_name}}, what's bugging you?! </a></h2>
     {{else}}
     <h2 class="description"><a href='/login'> Join the Conversation! </a></h2>
     {{/if}}
@@ -47,7 +47,8 @@
   {{#if loggedIn}}
 <aside>
   <div class="joinbox">
-  <form action="chatroom">
+    <a id="join_chatroom">
+  <form action="chatroom"></a>
     <div class="form-control">
       <label for="username">Username</label>
       <input type="text" name="username" id="username" placeholder="Enter username..." required />
