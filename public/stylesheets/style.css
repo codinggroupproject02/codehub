@@ -418,6 +418,9 @@ margin: 0;
   padding: 5%;
 }
 
+.bounties-posts {
+  width: 100%;
+}
 
 /************ BOUNTIES FORUM STYLE START *************/
 .bounties-forum {
@@ -429,7 +432,7 @@ margin: 0;
 
 
 .bounties-forum h1 {
-  padding: 0 0 2% 3%;
+  padding: 2% 0 2% 3%;
 }
 
 .latest-posts {
