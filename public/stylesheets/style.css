@@ -407,7 +407,6 @@ margin: 0;
   width: 100%;
   margin-bottom: 5%;
 }
-
 /*  END */
 
 
@@ -662,4 +661,24 @@ footer {
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+}
+/*************** FORUM DROP DOWN MENU ***********************/
+
+.dropdown-menu{
+  display: flex;
+  flex-direction: column;
+}
+
+/*************** INPUT STYLE *********************************/
+
+.input-color{
+  background-color: #1D1C14; 
+  color:white
+}
+
+/*************** REGISTRATION FORM ****************************/
+.registration-design{
+  background-color: #859877; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+  margin: 0 auto 0 auto;
 }

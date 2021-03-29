@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
-const { Post, User, Comment } = require("../models");
+const { User, Post, Vote, Comment, ProLang, Competence } = require("../models");
 
 router.get("/", (req, res) => {
   Post.findAll({
@@ -39,7 +39,6 @@ router.get("/", (req, res) => {
     ],
   })
     .then((dbPostData) => {
-      console.log('*******dbPostData: ' + dbPostData);
       if (!dbPostData) {
         res.status(404).json({ message: "No post found with this type of post" });
         return;

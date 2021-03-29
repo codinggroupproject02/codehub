@@ -22,9 +22,6 @@
       {{!-- Comment: This is for the post --}}
       {{/each}}
 
-      {{#if loggedIn}}
-      <script src="/javascript/comment.js"></script>
-      {{/if}}
     </div>
     {{!-- LATEST POSTS --}}
     <aside class="latest-posts">
@@ -46,3 +43,7 @@
       </div>
     </aside>
 </section>
+
+{{#if loggedIn}}
+      <script src="/javascript/comment.js"></script>
+  {{/if}}

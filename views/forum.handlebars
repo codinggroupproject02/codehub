@@ -1,6 +1,20 @@
 <section class="forum-main">
   <div class="forum-posts">
     <h1>FORUM</h1>
+    <div class="dropdown" style="padding-top: 5%; margin-bottom: 3%">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="/post/1">Python</a>
+    <a class="dropdown-item" href="/post/2">HTML</a>
+    <a class="dropdown-item" href="/post/3">CSS</a>
+    <a class="dropdown-item" href="/post/4">JavaScript</a>
+    <a class="dropdown-item" href="/post/5">TypeScript</a>
+    <a class="dropdown-item" href="/post/6">Java</a>
+    <a class="dropdown-item" href="/post/7">Ruby</a>
+  </div>
+</div>
     {{#each posts as |post|}}
     <li>
       {{> forum-info post}}
@@ -48,27 +62,9 @@
     </aside>
 </section>
 
+{{!-- {{#if loggedIn}} --}}
+{{!-- Comment: This is for the post --}}
+<script src="/javascript/comment-button.js"></script>
 
-{{!-- <table id='top'>
-  <tr>
-    <td style="border-left-style: solid;">
-      <section class="headlinePosts">
-        {{#each posts as |post|}}
-        <a href="#{{post.id}}">
-          <div class="headlinePost-title" style="height: 100px; border:1px black solid; ">
-            <h4>{{post.title}}</h4>
-          </div>
-        </a>
-        {{/each}}
-      </section> --}}
-
-      {{!-- Relative button to go to top --}}
-      {{!-- <a href="#top">
-        <div class="headlineBackTop">
-          <h4>Back to the top!</h4>
-        </div>
-      </a>
-
-    </td>
-  </tr>
-</table> --}}
+<script src="/javascript/skill-sort.js"></script>
+{{!-- {{/if}} --}}

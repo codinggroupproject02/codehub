@@ -2,6 +2,8 @@ const User = require("./User");
 const Post = require("./Post");
 const Vote = require("./Vote");
 const Comment = require("./Comment");
+const Competence = require("./Competence");
+const ProLang = require("./ProLang");
 
 //model associations
 User.hasMany(Post, {
@@ -59,4 +61,34 @@ Post.hasMany(Comment, {
   foreignKey: "post_id",
 });
 
-module.exports = { User, Post, Vote, Comment };
+//Programs...
+Post.belongsToMany(ProLang, {
+  through: Competence,
+  as: "competence_posts",
+  foreignKey: "post_id"
+});
+
+Post.hasMany(Competence, {
+  foreignKey:"post_id"
+});
+
+ProLang.hasMany(Competence, {
+  foreignKey:"prolang_id"
+});
+
+Competence.belongsTo(Post, {
+  foreignKey: "post_id"
+});
+
+Competence.belongsTo(ProLang, {
+  foreignKey: "prolang_id"
+});
+
+module.exports = {
+   User,
+   Post, 
+   Vote, 
+   Comment,
+   Competence,
+   ProLang
+};
