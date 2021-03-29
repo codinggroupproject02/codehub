@@ -411,14 +411,19 @@ margin: 0;
 /*  END */
 
 
-/******** FORUM POSTS START ********/
-
-
-.forum-posts {
-  padding: 5%;
+/******** FORUM STYLING START ********/
+.forum-main {
+  display: flex;
+  flex-direction: row;
+  padding: 4% 0;
+  background-color: #A7776B;
+}
+.forum-main h1 {
+  padding: 2% 0 2% 3%;
+  color: #ccc;
 }
 
-.bounties-posts {
+.bounties-posts, .forum-posts {
   width: 100%;
 }
 
@@ -430,9 +435,9 @@ margin: 0;
   background-color: #718484;
 }
 
-
 .bounties-forum h1 {
   padding: 2% 0 2% 3%;
+  color: #ccc;
 }
 
 .latest-posts {
