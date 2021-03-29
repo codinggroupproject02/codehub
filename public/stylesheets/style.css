@@ -264,12 +264,8 @@ nav div {
 }
 
 .form-control {
-  height: auto;
-  width: fit-content;
-  margin-bottom: 2%;
-  align-items: center;
-  background-color: #A7776B;
-  
+    height: 4vw;
+    margin-bottom: 2%;
 }
 
 .joinbox {
@@ -829,6 +825,16 @@ ul {
 	padding: 5px;
 	height: 40px;
 	flex: 5;
+}
+
+.chat-control{
+  height: auto;
+  width: fit-content;
+  margin-bottom: 2%;
+  align-items: center;
+  background-color: #A7776B;
+  padding: 5px 5px;
+  
 }
 
 @media screen and (max-width: 980px) {
