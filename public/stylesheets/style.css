@@ -12,20 +12,24 @@ header {
 }
 
 .navbar-brand {
-  font-size: 1.5vw;
+  font-size: 1.8vw;
 }
 
-.container-fluid {
-  padding: 8px 20px;
-  font-size: 1.2vw;
+.nav-item {
+  font-size: 1.3vw;
 }
+/* 
+.navbar-right {
+  position: absolute;
+  right: 2%;
+
+} */
 
 .navbar {
   border-radius: 0;
   margin: 0;
   border: 0;
 }
-
 
 .jumbotron {
   background-image: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url(../img/landing.png);
@@ -39,6 +43,7 @@ header {
   margin-bottom: 0;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .about {
@@ -46,9 +51,11 @@ header {
   margin-top: 10%;
 }
 
+
 .about h1 {
   width: auto;
   overflow: hidden;
+  font-size: 4vw;
   border-right: .15em solid orange;
   white-space: nowrap;
   margin: 0 auto;
@@ -84,6 +91,11 @@ header {
   font-weight: 400;
   margin-top: 3%;
   line-height: 1.7;
+  font-size: 1.4vw;
+}
+
+.about h2{
+  font-size: 2vw;
 }
 
 .description {
@@ -123,7 +135,6 @@ header {
 .arrow {
   display: flex;
   justify-content: center;
-  margin-top: 30vh;
 }
 
 .glyphicon-chevron-down {
@@ -178,7 +189,6 @@ header {
 }
 
 #about {
-  margin-bottom: 20%;
   background-color: #718484;
   width: 100%;
   min-height: 100vh;
@@ -206,7 +216,6 @@ header {
   color: rgb(63, 63, 63);
   font-size: 1.7vw;
 }
-
 
 
 .btn-dark {
@@ -250,10 +259,21 @@ header {
 }
 
 .form-control {
-  height: 4vw;
+  height: auto;
+  width: fit-content;
   margin-bottom: 2%;
+  align-items: center;
+  background-color: #A7776B;
+  
 }
 
+.joinbox {
+  display: flex;
+  justify-content: center;
+  padding: 0 30%;
+  margin-top: 5%;
+
+}
 .user-name-register {
   display: flex;
   flex-direction: row;
@@ -295,12 +315,6 @@ li {
 element.style {
   background: rgb(211, 211, 211);
 }
-
-/* .headlinePosts {
-  position: absolute;
-  top: 100px;
-  bottom: 0px;
-} */
 
 .headlinePost-title {
   display: flex;
@@ -399,6 +413,7 @@ element.style {
   background-color: #849170;
   min-height: 95vh;
 }
+
 .edit-post-btn {
 margin: 0;
 }
