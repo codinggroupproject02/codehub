@@ -250,10 +250,21 @@ header {
 }
 
 .form-control {
-  height: 4vw;
+  height: auto;
+  width: fit-content;
   margin-bottom: 2%;
+  align-items: center;
+  background-color: #A7776B;
+  
 }
 
+.joinbox {
+  display: flex;
+  justify-content: center;
+  padding: 0 30%;
+  margin-top: 5%;
+
+}
 .user-name-register {
   display: flex;
   flex-direction: row;
@@ -399,6 +410,7 @@ element.style {
   background-color: #849170;
   min-height: 95vh;
 }
+
 .edit-post-btn {
 margin: 0;
 }
